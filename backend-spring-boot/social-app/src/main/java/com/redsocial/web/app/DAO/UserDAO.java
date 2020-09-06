@@ -1,9 +1,11 @@
 package com.redsocial.web.app.DAO;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
@@ -83,6 +85,26 @@ public class UserDAO implements IUserService {
 	public void deleteUser(Integer idUser) {
 		// TODO Auto-generated method stub
 		jdbcCall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("DELETE_USER");
+		SqlParameterSource src = new MapSqlParameterSource().addValue("PUSER_ID", idUser);
+		
+		jdbcCall.execute(src);
+
+	}
+
+	@Transactional(readOnly = true)
+	public List<User> listUsers(){
+		
+		String sql = "SELECT * FROM USERS";
+		
+		List<User> listUser = jdbcTemplate.query(sql,BeanPropertyRowMapper.newInstance(User.class));
+		
+		return listUser;
+	}
+	
+	@Override
+	public void findById(Integer idUser) {
+		// TODO Auto-generated method stub
+		jdbcCall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("FIND_BY_ID");
 		SqlParameterSource src = new MapSqlParameterSource().addValue("PUSER_ID", idUser);
 		
 		jdbcCall.execute(src);
