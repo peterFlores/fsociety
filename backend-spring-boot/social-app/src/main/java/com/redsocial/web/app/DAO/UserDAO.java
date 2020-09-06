@@ -25,7 +25,7 @@ public class UserDAO implements IUserService {
 	
 	@Transactional
 	@Override
-	public void createUser(User user) {
+	public void createUser(User user) throws Exception {
 		// TODO Auto-generated method stub
 
 		jdbcCall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("CREATE_USER");
@@ -35,9 +35,25 @@ public class UserDAO implements IUserService {
 		Map.put("PUSER_MAIL", user.getUserMail());
 		Map.put("PUSER_PASSWORD", user.getUserPassword());
 		
-		SqlParameterSource src = new MapSqlParameterSource().addValues(Map);
 		
-		jdbcCall.execute(src);
+		//Contamos dentro de la BD cuantos usuarios cuentan con este EMAIL
+				String sqlEmail = "SELECT count(*) FROM USERS WHERE USER_MAIL = ? ";
+				int countEmail = jdbcTemplate.queryForObject(sqlEmail, new Object[] {user.getUserMail()}, Integer.class);
+				
+				String sqlNickname = "SELECT count(*) FROM USERS WHERE USER_NICKNAME = ? ";
+				int countNickName= jdbcTemplate.queryForObject(sqlNickname, new Object[] {user.getUserNickname()}, Integer.class);
+				
+				if (countEmail > 0){
+					throw new IllegalArgumentException("EMAIL ALREADY EXISTS");
+				}
+				
+				else if (countNickName > 0){
+					throw new Exception("NICKNAME ALREADY EXISTS");
+				}
+				
+				SqlParameterSource src = new MapSqlParameterSource().addValues(Map);
+				
+				jdbcCall.execute(src);
 		
 	}
 

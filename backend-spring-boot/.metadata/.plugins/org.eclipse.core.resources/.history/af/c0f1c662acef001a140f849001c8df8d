@@ -1,4 +1,0 @@
-spring.jpa.hibernate.ddl-auto=update
-spring.datasource.url=jdbc:mysql://localhost:3306/SOCIAL?useSSL=false&serverTimezone=GMT-6
-spring.datasource.username=root
-spring.datasource.password=2712
