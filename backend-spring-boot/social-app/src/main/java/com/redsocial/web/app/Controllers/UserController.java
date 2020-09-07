@@ -76,7 +76,7 @@ public class UserController {
 		return response;
 	}
 
-	@GetMapping("/search/userId/{idUser}")
+	@GetMapping("/search/id/{idUser}")
 	public Response FindUserId(@PathVariable("idUser") Integer idUser) {
 		List<User> userFound = service.findByUserId(idUser);
 
@@ -85,7 +85,7 @@ public class UserController {
 		return response;
 	}
 
-	@GetMapping("/search/userEmail/{email}")
+	@GetMapping("/search/email/{email}")
 	public Response FindUserEmail(@PathVariable("email") String email) {
 		List<User> userFound = service.findByUserMail(email);
 
@@ -94,7 +94,7 @@ public class UserController {
 		return response;
 	}
 
-	@GetMapping("/search/userNickname/{nickname}")
+	@GetMapping("/search/nickname/{nickname}")
 	public Response FindUserNickname(@PathVariable("nickname") String nickname) {
 		List<User> userFound = service.findByUserNickname(nickname);
 
