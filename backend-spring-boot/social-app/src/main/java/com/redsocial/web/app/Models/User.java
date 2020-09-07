@@ -2,50 +2,44 @@ package com.redsocial.web.app.Models;
 
 import java.util.Date;
 
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-
-@JsonPropertyOrder({"idUser","userName","userNickname","userMail","userPassword","userImage",
-	"userBirthDate","userGender","userRole","userCreatedAt","userStatus"})
+@JsonPropertyOrder({ "idUser", "userName", "userNickname", "userMail", "userPassword", "userImage", "userBirthDate",
+		"userGender", "userRole", "userCreatedAt", "userStatus" })
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class User {
-	
-	
+
 	private Long idUser;
 
 	private String userName;
-	
+
 	private String userNickname;
 
-	
 	private String userMail;
-	
+
 	private String userPassword;
-	
+
 	private String userImage;
 
-	@JsonFormat(pattern="DD-MM-YYYY")
+	@JsonFormat(pattern = "DD-MM-YYYY")
 	private Date userBirthDate;
 
 	private String userGender;
 
 	private String userRole;
 
-	@JsonFormat(pattern="DD-MM-YYYY")
+	@JsonFormat(pattern = "DD-MM-YYYY")
 	private Date userCreatedAt;
 
 	private String userStatus;
-	
+
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 	public User(Long idUser, String userName, String userNickname, String userMail, String userPassword,
 			String userImage, Date userBirthDate, String userGender, String userRole, Date userCreatedAt,
@@ -63,8 +57,6 @@ public class User {
 		this.userCreatedAt = userCreatedAt;
 		this.userStatus = userStatus;
 	}
-
-
 
 	public Long getIdUser() {
 		return idUser;
@@ -153,7 +145,5 @@ public class User {
 	public void setUserStatus(String userStatus) {
 		this.userStatus = userStatus;
 	}
-	
-	
 
 }
