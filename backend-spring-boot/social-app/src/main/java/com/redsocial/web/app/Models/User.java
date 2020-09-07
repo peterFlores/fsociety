@@ -11,31 +11,33 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({"idUser","userName","userNickname","userMail","userPassword","userImage",
 	"userBirthDate","userGender","userRole","userCreatedAt","userStatus"})
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class User {
 	
-	@JsonInclude(JsonInclude.Include.NON_NULL)
+	
 	private Long idUser;
-	@JsonInclude(JsonInclude.Include.NON_NULL)
+
 	private String userName;
-	@JsonInclude(JsonInclude.Include.NON_NULL)
+	
 	private String userNickname;
-	@JsonInclude(JsonInclude.Include.NON_NULL)
+
+	
 	private String userMail;
-	@JsonInclude(JsonInclude.Include.NON_NULL)
+	
 	private String userPassword;
-	@JsonInclude(JsonInclude.Include.NON_NULL)
+	
 	private String userImage;
-	@JsonInclude(JsonInclude.Include.NON_NULL)
-	@JsonFormat(pattern="yyyy-MM-dd")
+
+	@JsonFormat(pattern="DD-MM-YYYY")
 	private Date userBirthDate;
-	@JsonInclude(JsonInclude.Include.NON_NULL)
+
 	private String userGender;
-	@JsonInclude(JsonInclude.Include.NON_NULL)
+
 	private String userRole;
-	@JsonInclude(JsonInclude.Include.NON_NULL)
+
 	@JsonFormat(pattern="DD-MM-YYYY")
 	private Date userCreatedAt;
-	@JsonInclude(JsonInclude.Include.NON_NULL)
+
 	private String userStatus;
 	
 	public User() {

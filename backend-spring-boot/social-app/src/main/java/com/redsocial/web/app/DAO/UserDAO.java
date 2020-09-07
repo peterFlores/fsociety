@@ -46,11 +46,11 @@ public class UserDAO implements IUserService {
 				int countNickName= jdbcTemplate.queryForObject(sqlNickname, new Object[] {user.getUserNickname()}, Integer.class);
 				
 				if (countEmail > 0){
-					throw new IllegalArgumentException("EMAIL ALREADY EXISTS");
+					throw new RuntimeException("EMAIL ALREADY EXISTS");
 				}
 				
 				else if (countNickName > 0){
-					throw new Exception("NICKNAME ALREADY EXISTS");
+					throw new RuntimeException("NICKNAME ALREADY EXISTS");
 				}
 				
 				SqlParameterSource src = new MapSqlParameterSource().addValues(Map);

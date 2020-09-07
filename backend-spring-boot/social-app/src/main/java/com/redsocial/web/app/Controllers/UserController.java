@@ -32,20 +32,15 @@ public class UserController {
 	@PostMapping(value = "/createUser" ,consumes = { MediaType.APPLICATION_JSON_VALUE ,MediaType.APPLICATION_FORM_URLENCODED_VALUE  } , produces = "application/json")
 	public Response AddUser(@RequestBody User user) throws Exception {
 		
-		Response response =  new Response("1","SUCCESS",user);
-		
+		Response response = null;
 		try {
 			service.createUser(user);
-		} catch (IllegalArgumentException e) {
+
+			 response =  new Response("1","SUCCESS",user);
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Response responseFail =  new Response("2","EMAIL ALREADY EXISTS",user);
-			response = responseFail;
-			e.printStackTrace();
-		}
-		catch (Exception e) {
-			// TODO Auto-generated catch block
-			Response responseFail =  new Response("3","NICKNAME ALREADY EXISTS",user);
-			response = responseFail;
+			response  =  new Response("2",e.getMessage(),user);
+			
 			e.printStackTrace();
 		}
 
