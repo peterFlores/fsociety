@@ -72,7 +72,12 @@ public class UserController {
 		return response;
 	}
 	
-	
-	
-	
+	@GetMapping("/search/email/{email}")
+	public Response RemoveUSer(@PathVariable("email") String email) {
+		List<User> lista = service.findByUserMail(email);
+		
+		Response response =  new Response("00","SUCCESS", lista);
+
+		return response;
+	}
 }

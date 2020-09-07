@@ -12,7 +12,9 @@ public interface IUserService {
 	public void deleteUser (Integer idUser);
 	
 	public List<User> listUsers();
-	public void findById(Integer idUser);
-
+	
+	public List<User> findById(Integer idUser);
+	
+	public List<User> findByUserMail(String email);
 
 }

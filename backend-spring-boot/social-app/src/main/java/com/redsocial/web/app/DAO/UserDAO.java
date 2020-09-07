@@ -100,15 +100,19 @@ public class UserDAO implements IUserService {
 		
 		return listUser;
 	}
-	
-	@Override
-	public void findById(Integer idUser) {
-		// TODO Auto-generated method stub
-		jdbcCall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("FIND_BY_ID");
-		SqlParameterSource src = new MapSqlParameterSource().addValue("PUSER_ID", idUser);
-		
-		jdbcCall.execute(src);
 
+	@Override
+	public List<User> findById(Integer idUser) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
+	@Override
+	public List<User> findByUserMail(String email) {
+		String sql = "SELECT * FROM USERS WHERE USER_MAIL = ?";
+		
+		List<User> listUser = jdbcTemplate.query(sql, new Object[] { email },BeanPropertyRowMapper.newInstance(User.class));
+		
+		return listUser;
+	}
 }

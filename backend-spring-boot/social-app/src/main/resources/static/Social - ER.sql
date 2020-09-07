@@ -142,3 +142,22 @@ END$$
 DELIMITER ;
 
 CALL delete_user(1);
+
+
+
+--FIND BY ID 
+
+DELIMITER $$
+
+CREATE PROCEDURE find_by_id(PUSER_ID INT)
+
+BEGIN
+    SELECT * FROM USERS
+	WHERE USER_ID = PUSER_ID;
+
+END$$
+
+DELIMITER;
+
+CALL find_by_id(1);
+
