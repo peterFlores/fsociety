@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,11 +18,13 @@ import com.redsocial.web.app.Models.User;
 import com.redsocial.web.app.Services.IUserService;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class UserController {
 
 	@Autowired
 	private IUserService service;
 
+	
 	@GetMapping("/listUser")
 	public List<User> listUsers() {
 		return service.listUsers();
@@ -58,7 +61,6 @@ public class UserController {
 
 			response = new Response("1", "SUCCESS", user);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			response = new Response("2", e.getMessage(), user);
 
 			e.printStackTrace();
