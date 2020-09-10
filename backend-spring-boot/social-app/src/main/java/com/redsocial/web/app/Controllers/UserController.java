@@ -104,4 +104,13 @@ public class UserController {
 
 		return response;
 	}
+	
+	@GetMapping("/search/username/{username}")
+	public Response FindUserName(@PathVariable("username") String username) {
+		List<User> userFound = service.findByUserName(username);
+
+		Response response = new Response("1", "SUCCESS", userFound);
+
+		return response;
+	}
 }

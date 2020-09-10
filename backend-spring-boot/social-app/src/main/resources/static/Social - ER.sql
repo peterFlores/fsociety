@@ -107,5 +107,3 @@ DELIMITER ;
 
 CALL delete_user(1);
 
-
-

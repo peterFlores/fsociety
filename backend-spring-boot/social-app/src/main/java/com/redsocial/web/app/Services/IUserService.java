@@ -19,5 +19,7 @@ public interface IUserService {
 	public List<User> findByUserMail(String email);
 
 	public List<User> findByUserNickname(String nickname);
+	
+	public List<User> findByUserName(String userName);
 
 }

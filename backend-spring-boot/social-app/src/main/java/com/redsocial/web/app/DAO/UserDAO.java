@@ -1,12 +1,15 @@
 package com.redsocial.web.app.DAO;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
@@ -97,19 +100,54 @@ public class UserDAO implements IUserService {
 	@Override
 	public List<User> listUsers() {
 
-		String sql = "SELECT * FROM USERS";
+		String sql = "SELECT * FROM USERS WHERE USER_ROLE = 'SOCIAL' ";
 
-		List<User> listUser = jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(User.class));
+		List<User> listUser = jdbcTemplate.query(sql,new RowMapper<User>() {
+			
+			@Override
+			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+				User user = new User();
+				
+				user.setUserImage(rs.getString("USER_IMAGE_PATH"));
+				user.setIdUser(rs.getLong("USER_ID"));
+				user.setUserName(rs.getString("USER_NAME"));
+				user.setUserNickname(rs.getString("USER_NICKNAME"));
+				user.setUserMail(rs.getString("USER_MAIL"));
+				user.setUserBirthDate(rs.getDate("USER_BIRTHDATE"));
+				user.setUserGender(rs.getString("USER_GENDER"));
+				user.setUserCreatedAt(rs.getDate("USER_CREATED_AT"));
+				user.setUserStatus(rs.getString("USER_STATUS"));
+				return user;
+			}
+		});
 
 		return listUser;
+		
+	
 	}
 
 	@Override
 	public List<User> findByUserId(Integer idUser) {
 		String sql = "SELECT * FROM USERS WHERE USER_ID = ?";
 
-		List<User> listUser = jdbcTemplate.query(sql, new Object[] { idUser },
-				BeanPropertyRowMapper.newInstance(User.class));
+		List<User> listUser = jdbcTemplate.query(sql,new Object[] {idUser},new RowMapper<User>() {
+			
+			@Override
+			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+				User user = new User();
+				
+				user.setUserImage(rs.getString("USER_IMAGE_PATH"));
+				user.setIdUser(rs.getLong("USER_ID"));
+				user.setUserName(rs.getString("USER_NAME"));
+				user.setUserNickname(rs.getString("USER_NICKNAME"));
+				user.setUserMail(rs.getString("USER_MAIL"));
+				user.setUserBirthDate(rs.getDate("USER_BIRTHDATE"));
+				user.setUserGender(rs.getString("USER_GENDER"));
+				user.setUserCreatedAt(rs.getDate("USER_CREATED_AT"));
+				user.setUserStatus(rs.getString("USER_STATUS"));
+				return user;
+			}
+		});
 
 		return listUser;
 	}
@@ -118,8 +156,24 @@ public class UserDAO implements IUserService {
 	public List<User> findByUserMail(String email) {
 		String sql = "SELECT * FROM USERS WHERE USER_MAIL = ?";
 
-		List<User> listUser = jdbcTemplate.query(sql, new Object[] { email },
-				BeanPropertyRowMapper.newInstance(User.class));
+		List<User> listUser = jdbcTemplate.query(sql,new Object[] {email},new RowMapper<User>() {
+			
+			@Override
+			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+				User user = new User();
+				
+				user.setUserImage(rs.getString("USER_IMAGE_PATH"));
+				user.setIdUser(rs.getLong("USER_ID"));
+				user.setUserName(rs.getString("USER_NAME"));
+				user.setUserNickname(rs.getString("USER_NICKNAME"));
+				user.setUserMail(rs.getString("USER_MAIL"));
+				user.setUserBirthDate(rs.getDate("USER_BIRTHDATE"));
+				user.setUserGender(rs.getString("USER_GENDER"));
+				user.setUserCreatedAt(rs.getDate("USER_CREATED_AT"));
+				user.setUserStatus(rs.getString("USER_STATUS"));
+				return user;
+			}
+		});
 
 		return listUser;
 	}
@@ -128,8 +182,51 @@ public class UserDAO implements IUserService {
 	public List<User> findByUserNickname(String nickname) {
 		String sql = "SELECT * FROM USERS WHERE USER_NICKNAME = ?";
 
-		List<User> listUser = jdbcTemplate.query(sql, new Object[] { nickname },
-				BeanPropertyRowMapper.newInstance(User.class));
+		List<User> listUser = jdbcTemplate.query(sql,new Object[] {nickname},new RowMapper<User>() {
+			
+			@Override
+			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+				User user = new User();
+				
+				user.setUserImage(rs.getString("USER_IMAGE_PATH"));
+				user.setIdUser(rs.getLong("USER_ID"));
+				user.setUserName(rs.getString("USER_NAME"));
+				user.setUserNickname(rs.getString("USER_NICKNAME"));
+				user.setUserMail(rs.getString("USER_MAIL"));
+				user.setUserBirthDate(rs.getDate("USER_BIRTHDATE"));
+				user.setUserGender(rs.getString("USER_GENDER"));
+				user.setUserCreatedAt(rs.getDate("USER_CREATED_AT"));
+				user.setUserStatus(rs.getString("USER_STATUS"));
+				return user;
+			}
+		});
+
+		return listUser;
+	}
+	
+	
+	@Override
+	public List<User> findByUserName(String userName) {
+		String sql = "SELECT * FROM USERS WHERE USER_NAME = ?";
+
+		List<User> listUser = jdbcTemplate.query(sql,new Object[] {userName},new RowMapper<User>() {
+			
+			@Override
+			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+				User user = new User();
+				
+				user.setUserImage(rs.getString("USER_IMAGE_PATH"));
+				user.setIdUser(rs.getLong("USER_ID"));
+				user.setUserName(rs.getString("USER_NAME"));
+				user.setUserNickname(rs.getString("USER_NICKNAME"));
+				user.setUserMail(rs.getString("USER_MAIL"));
+				user.setUserBirthDate(rs.getDate("USER_BIRTHDATE"));
+				user.setUserGender(rs.getString("USER_GENDER"));
+				user.setUserCreatedAt(rs.getDate("USER_CREATED_AT"));
+				user.setUserStatus(rs.getString("USER_STATUS"));
+				return user;
+			}
+		});
 
 		return listUser;
 	}
