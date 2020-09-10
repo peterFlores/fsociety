@@ -94,6 +94,7 @@ public class UserDAO implements IUserService {
 	}
 
 	@Transactional(readOnly = true)
+	@Override
 	public List<User> listUsers() {
 
 		String sql = "SELECT * FROM USERS";
@@ -132,4 +133,5 @@ public class UserDAO implements IUserService {
 
 		return listUser;
 	}
+
 }

@@ -73,7 +73,7 @@ public class UserController {
 	public Response RemoveUser(@PathVariable Integer id) {
 		service.deleteUser(id);
 
-		Response response = new Response("00", "SUCCESS");
+		Response response = new Response("1", "SUCCESS");
 
 		return response;
 	}
@@ -82,7 +82,7 @@ public class UserController {
 	public Response FindUserId(@PathVariable("idUser") Integer idUser) {
 		List<User> userFound = service.findByUserId(idUser);
 
-		Response response = new Response("00", "SUCCESS", userFound);
+		Response response = new Response("1", "SUCCESS", userFound);
 
 		return response;
 	}
@@ -91,7 +91,7 @@ public class UserController {
 	public Response FindUserEmail(@PathVariable("email") String email) {
 		List<User> userFound = service.findByUserMail(email);
 
-		Response response = new Response("00", "SUCCESS", userFound);
+		Response response = new Response("1", "SUCCESS", userFound);
 
 		return response;
 	}
@@ -100,7 +100,7 @@ public class UserController {
 	public Response FindUserNickname(@PathVariable("nickname") String nickname) {
 		List<User> userFound = service.findByUserNickname(nickname);
 
-		Response response = new Response("00", "SUCCESS", userFound);
+		Response response = new Response("1", "SUCCESS", userFound);
 
 		return response;
 	}
