@@ -1,11 +1,12 @@
 package com.redsocial.web.app.DAO;
 
+import java.io.File;
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -15,6 +16,7 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.redsocial.web.app.Models.User;
 import com.redsocial.web.app.Services.IUserService;
@@ -180,7 +182,9 @@ public class UserDAO implements IUserService {
 
 	@Override
 	public List<User> findByUserNickname(String nickname) {
-		String sql = "SELECT * FROM USERS WHERE USER_NICKNAME = ?";
+		String sql = "SELECT * FROM USERS WHERE USER_NICKNAME LIKE  ?";
+		
+
 
 		List<User> listUser = jdbcTemplate.query(sql,new Object[] {nickname},new RowMapper<User>() {
 			
@@ -230,5 +234,29 @@ public class UserDAO implements IUserService {
 
 		return listUser;
 	}
+
+	@Override
+	public void updatePicture(MultipartFile picture, Long idUser) throws IllegalStateException, IOException {
+
+		String route = "/Users/celsojavierrojasvillegas/ProfilePicture" + picture.getOriginalFilename();    
+		
+		User user = new User();
+		
+		user.setIdUser(idUser);
+		user.setUserImage(route);
+		
+			picture.transferTo(new File(route));
+			
+			jdbcCall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("UPDATE_PICTURE_USER");
+			Map<String, Object> Map = new HashMap<String, Object>();
+			
+			Map.put("PUSER_ID", user.getIdUser());
+			Map.put("PUSER_IMAGE_PATH", user.getUserImage());
+	
+			SqlParameterSource src = new MapSqlParameterSource().addValues(Map);
+			jdbcCall.execute(src);
+			
+	}
+
 
 }

@@ -1,5 +1,6 @@
 package com.redsocial.web.app.Controllers;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.redsocial.web.app.Models.Response;
 import com.redsocial.web.app.Models.User;
@@ -113,4 +116,20 @@ public class UserController {
 
 		return response;
 	}
+	
+	
+	@PostMapping(value = "/upload/picture/{idUser}")
+	
+	public Response UpdatePicture(@PathVariable("idUser") Long idUser, @RequestParam("picture") MultipartFile picture) throws IllegalStateException, IOException{
+		
+	service.updatePicture(picture, idUser);
+	
+	Response response = new Response("1", "SUCCESS");
+
+	
+	return (response);
+		
+	}
+	
+	
 }
