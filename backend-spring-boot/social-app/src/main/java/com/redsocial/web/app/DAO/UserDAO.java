@@ -238,9 +238,9 @@ public class UserDAO implements IUserService {
 	@Override
 	public void updatePicture(MultipartFile picture, Long idUser) throws IllegalStateException, IOException {
 
-		String route = "52.15.178.31/Images/" + picture.getOriginalFilename();    
-		
+		String route = "http://52.15.178.31/var/www/html/Images/" + picture.getOriginalFilename();    
 		User user = new User();
+		
 		
 		user.setIdUser(idUser);
 		user.setUserImage(route);
