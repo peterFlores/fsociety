@@ -1303,3 +1303,13 @@
 2020-09-12 17:30:28,192 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2020-09-12 17:30:28,194 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-09-12 17:30:28,194 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
+2020-09-12 17:43:09,685 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-09-12 17:43:09,686 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-09-12 17:43:09,687 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-09-12 17:43:09,690 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-09-12 17:43:09,690 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
+2020-09-12 17:48:52,014 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-09-12 17:48:52,015 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-09-12 17:48:52,019 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-09-12 17:48:52,021 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-09-12 17:48:52,021 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
