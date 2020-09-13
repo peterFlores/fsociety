@@ -118,7 +118,7 @@ public class UserController {
 	}
 	
 	
-	@PostMapping(value = "/upload/picture/{idUser}")
+	@PostMapping(value = "/upload/picture/{idUser}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	
 	public Response UpdatePicture(@PathVariable("idUser") Long idUser, @RequestParam("picture") MultipartFile picture) throws IllegalStateException, IOException{
 		
