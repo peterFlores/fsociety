@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -158,24 +159,9 @@ public class UserDAO implements IUserService {
 	public List<User> findByUserMail(String email) {
 		String sql = "SELECT * FROM USERS WHERE USER_MAIL = ?";
 
-		List<User> listUser = jdbcTemplate.query(sql,new Object[] {email},new RowMapper<User>() {
+		List<User> listUser = jdbcTemplate.query(sql,new Object[] {email}, BeanPropertyRowMapper.newInstance(User.class));
+		
 			
-			@Override
-			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-				User user = new User();
-				
-				user.setUserImage(rs.getString("USER_IMAGE_PATH"));
-				user.setIdUser(rs.getLong("USER_ID"));
-				user.setUserName(rs.getString("USER_NAME"));
-				user.setUserNickname(rs.getString("USER_NICKNAME"));
-				user.setUserMail(rs.getString("USER_MAIL"));
-				user.setUserBirthDate(rs.getDate("USER_BIRTHDATE"));
-				user.setUserGender(rs.getString("USER_GENDER"));
-				user.setUserCreatedAt(rs.getDate("USER_CREATED_AT"));
-				user.setUserStatus(rs.getString("USER_STATUS"));
-				return user;
-			}
-		});
 
 		return listUser;
 	}
