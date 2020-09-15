@@ -24,14 +24,14 @@ public class User {
 
 	private String userImage;
 
-	@JsonFormat(pattern = "DD-MM-YYYY")
+	@JsonFormat(pattern = "YYYY-MM-DD")
 	private Date userBirthDate;
 
 	private String userGender;
 
 	private String userRole;
 
-	@JsonFormat(pattern = "DD-MM-YYYY")
+	@JsonFormat(pattern =  "MM/dd/yyyy hh:mm:ss a")
 	private Date userCreatedAt;
 
 	private String userStatus;
