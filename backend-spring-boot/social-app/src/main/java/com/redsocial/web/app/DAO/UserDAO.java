@@ -127,11 +127,40 @@ public class UserDAO implements IUserService {
 
 	}
 
-	@Override
-	public List<User> findByUserId(Integer idUser) {
-		String sql = "SELECT * FROM USERS WHERE USER_ID = ?";
 
-		List<User> listUser = jdbcTemplate.query(sql, new Object[] { idUser }, new RowMapper<User>() {
+
+	@Override
+	public List<User> findBy(String searchMethod, String searchData){
+		
+		String option = searchMethod;
+		String sql = null;
+		
+		switch(option) 
+        { 
+            case "byName": 
+        	 sql = "SELECT * FROM USERS WHERE USER_NAME LIKE '%" + searchData + "%' AND USER_ROLE = 'SOCIAL'";
+            	break;
+
+            case "byNickname": 
+        	sql = "SELECT * FROM USERS WHERE USER_NICKNAME LIKE  '%" + searchData + "%' AND USER_ROLE = 'SOCIAL'";
+
+                break; 
+            case "byMail": 
+        	 sql = "SELECT * FROM USERS WHERE USER_MAIL LIKE  '%" + searchData + "%' AND USER_ROLE = 'SOCIAL'";
+
+                break;
+                
+            case "byId":
+        	 sql = "SELECT * FROM USERS WHERE USER_ID LIKE  '%" + searchData + "%' AND USER_ROLE = 'SOCIAL'";
+
+            	break;
+            default: 
+                System.out.println("NOT A SEARCH METHOD"); 
+                
+        } 
+		
+
+		List<User> listUser = jdbcTemplate.query(sql, new RowMapper<User>() {
 
 			@Override
 			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -147,11 +176,22 @@ public class UserDAO implements IUserService {
 				user.setUserCreatedAt(rs.getDate("USER_CREATED_AT"));
 				user.setUserStatus(rs.getString("USER_STATUS"));
 				return user;
+
 			}
 		});
+		
+		if (listUser.isEmpty()) {
+			throw new RuntimeException("USER NOT FOUND.");
+		}
 
 		return listUser;
 	}
+	
+	
+	
+	
+
+	// Dont delete, implemented on oauth-service
 
 	@Override
 	public List<User> findByUserMail(String email) {
@@ -175,58 +215,6 @@ public class UserDAO implements IUserService {
 				user.setUserPassword(rs.getString("USER_PASSWORD"));
 				user.setUserRole(rs.getString("USER_ROLE"));
 
-				return user;
-			}
-		});
-
-		return listUser;
-	}
-
-	@Override
-	public List<User> findByUserNickname(String nickname) {
-		String sql = "SELECT * FROM USERS WHERE USER_NICKNAME LIKE  ?";
-
-		List<User> listUser = jdbcTemplate.query(sql, new Object[] { nickname }, new RowMapper<User>() {
-
-			@Override
-			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-				User user = new User();
-
-				user.setUserImage(rs.getString("USER_IMAGE_PATH"));
-				user.setIdUser(rs.getLong("USER_ID"));
-				user.setUserName(rs.getString("USER_NAME"));
-				user.setUserNickname(rs.getString("USER_NICKNAME"));
-				user.setUserMail(rs.getString("USER_MAIL"));
-				user.setUserBirthDate(rs.getDate("USER_BIRTHDATE"));
-				user.setUserGender(rs.getString("USER_GENDER"));
-				user.setUserCreatedAt(rs.getDate("USER_CREATED_AT"));
-				user.setUserStatus(rs.getString("USER_STATUS"));
-				return user;
-			}
-		});
-
-		return listUser;
-	}
-
-	@Override
-	public List<User> findByUserName(String userName) {
-		String sql = "SELECT * FROM USERS WHERE USER_NAME = ?";
-
-		List<User> listUser = jdbcTemplate.query(sql, new Object[] { userName }, new RowMapper<User>() {
-
-			@Override
-			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-				User user = new User();
-
-				user.setUserImage(rs.getString("USER_IMAGE_PATH"));
-				user.setIdUser(rs.getLong("USER_ID"));
-				user.setUserName(rs.getString("USER_NAME"));
-				user.setUserNickname(rs.getString("USER_NICKNAME"));
-				user.setUserMail(rs.getString("USER_MAIL"));
-				user.setUserBirthDate(rs.getDate("USER_BIRTHDATE"));
-				user.setUserGender(rs.getString("USER_GENDER"));
-				user.setUserCreatedAt(rs.getDate("USER_CREATED_AT"));
-				user.setUserStatus(rs.getString("USER_STATUS"));
 				return user;
 			}
 		});

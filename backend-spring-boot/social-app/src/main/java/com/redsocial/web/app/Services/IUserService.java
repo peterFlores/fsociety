@@ -8,6 +8,8 @@ import org.springframework.web.multipart.MultipartFile;
 import com.redsocial.web.app.Models.User;
 
 public interface IUserService {
+	
+	// CURD Users SQL use of procedures.
 
 	public void createUser(User user) throws Exception;
 
@@ -16,14 +18,17 @@ public interface IUserService {
 	public void deleteUser(Integer idUser);
 
 	public List<User> listUsers();
-
-	public List<User> findByUserId(Integer idUser);
-
-	public List<User> findByUserMail(String email);
-
-	public List<User> findByUserNickname(String nickname);
 	
-	public List<User> findByUserName(String userName);
+	// Search with LIKE on SQL.
+	
+	public List<User> findBy(String searchMethod, String searchData) throws Exception;
+	
+	
+	//Dont delete, implemented on oauth-service.
+	
+	public List<User> findByUserMail(String email);
+	
+	// Profile picture upload for user id.
 	
 	public void updatePicture(MultipartFile picture, Long idUser) throws IllegalStateException, IOException;
 	
