@@ -6188,3 +6188,130 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.jface.text.codemining.CodeMiningStrategy.reconcile(CodeMiningStrategy.java:52)
 	at org.eclipse.jface.text.reconciler.Reconciler.process(Reconciler.java:149)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:37:22.845
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.PHBisgfC
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:37:22.849
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.PHBisgfC
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:37:22.850
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:37:22.850
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.PHBisgfC => OK
+
+!ENTRY org.eclipse.ui 2 2 2020-09-15 09:37:23.652
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2020-09-15 09:51:25.738 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_231
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_GT
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/celsojavierrojasvillegas/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/celsojavierrojasvillegas/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-09-15 09:53:59.736
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2020-09-15 09:54:02.108
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-15 09:54:02.108
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3747877,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@86abdbd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:10.963
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:10.965
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6e9698cf[org.springframework.tooling.boot.ls:1.15.0.202003180840(id=1182)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:10.969
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:11.055
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.667
+!MESSAGE Boot LS startup time from start to initialized: 6673ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.809
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.PBOcaQmcisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.809
+!MESSAGE Sorting projects...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.814
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.815
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.816
+!MESSAGE Sorting projects... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.817
+!MESSAGE inside synchronized Subscriptions
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.817
+!MESSAGE subscribing to classpath changes: sts4.classpath.PBOcaQmc isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.821
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.825
+!MESSAGE subsribers = {sts4.classpath.PBOcaQmc=Send Classpath Notifications(75)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.825
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.826
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:17.826
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.PBOcaQmc => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:19.674
+!MESSAGE Preparing classpath changed notification social-app
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:19.674
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:19.700
+!MESSAGE classpath=96 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:19.702
+!MESSAGE buffering callback sts4.classpath.PBOcaQmc social-app false 96
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:19.708
+!MESSAGE Preparing classpath changed notification social-oauth-service
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:19.712
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:19.742
+!MESSAGE classpath=136 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:19.748
+!MESSAGE buffering callback sts4.classpath.PBOcaQmc social-oauth-service false 136
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:19.749
+!MESSAGE executing callback sts4.classpath.PBOcaQmc 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-15 09:54:19.960
+!MESSAGE executing callback sts4.classpath.PBOcaQmc SUCCESS [done]
