@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -23,8 +24,10 @@ import com.redsocial.web.app.Models.Response;
 import com.redsocial.web.app.Models.User;
 import com.redsocial.web.app.Services.IUserService;
 
+
 @RestController
 @CrossOrigin(origins = "*")
+@RequestMapping("user")
 public class UserController {
 
 	@Autowired
