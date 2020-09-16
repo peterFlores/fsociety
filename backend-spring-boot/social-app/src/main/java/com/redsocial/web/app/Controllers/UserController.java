@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.redsocial.web.app.Models.Response;
 import com.redsocial.web.app.Models.User;
@@ -25,7 +25,6 @@ import com.redsocial.web.app.Services.IUserService;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("user")
 public class UserController {
 
 	@Autowired
@@ -69,11 +68,10 @@ public class UserController {
 	@PutMapping(value = "/updateUser/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
 	public Response updateUser(@PathVariable Integer id, @RequestBody User user) throws Exception {
-		service.updateUser(user);
 
 		Response response = null;
 		try {
-			service.createUser(user);
+			service.updateUser(user);
 
 			response = new Response("1", "SUCCESS", user);
 		} catch (Exception e) {
@@ -94,14 +92,26 @@ public class UserController {
 		return response;
 	}
 
-	@GetMapping("/search/id/{idUser}")
-	public Response FindUserId(@PathVariable("idUser") Integer idUser) {
-		List<User> userFound = service.findByUserId(idUser);
+	@GetMapping("/search/{searchMethod}/{searchData}")
+	public Response FindUserBy(@PathVariable("searchMethod") String searchMethod,
+			@PathVariable("searchData") String searchData) throws Exception {
 
-		Response response = new Response("1", "SUCCESS", userFound);
+		List<User> userFound = null;
+		Response response = null;
+		try {
+			userFound = service.findBy(searchMethod, searchData);
+
+			response = new Response("1", "SUCCESS", userFound);
+		} catch (Exception e) {
+			response = new Response("2", e.getMessage(), userFound);
+
+			e.printStackTrace();
+		}
 
 		return response;
 	}
+
+	// Dont delete, implemented on oauth-service
 
 	@GetMapping("/search/email/{email}")
 	public Response FindUserEmail(@PathVariable("email") String email) {
@@ -112,37 +122,17 @@ public class UserController {
 		return response;
 	}
 
-	@GetMapping("/search/nickname/{nickname}")
-	public Response FindUserNickname(@PathVariable("nickname") String nickname) {
-		List<User> userFound = service.findByUserNickname(nickname);
-
-		Response response = new Response("1", "SUCCESS", userFound);
-
-		return response;
-	}
-	
-	@GetMapping("/search/username/{username}")
-	public Response FindUserName(@PathVariable("username") String username) {
-		List<User> userFound = service.findByUserName(username);
-
-		Response response = new Response("1", "SUCCESS", userFound);
-
-		return response;
-	}
-	
-	
 	@PostMapping(value = "/upload/picture/{idUser}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-	
-	public Response UpdatePicture(@PathVariable("idUser") Long idUser, @RequestParam("picture") MultipartFile picture) throws IllegalStateException, IOException{
-		
-	service.updatePicture(picture, idUser);
-	
-	Response response = new Response("1", "SUCCESS");
 
-	
-	return (response);
-		
+	public Response UpdatePicture(@PathVariable("idUser") Long idUser, @RequestParam("picture") MultipartFile picture,
+			RedirectAttributes redirectAttributes) throws IllegalStateException, IOException {
+
+		service.updatePicture(picture, idUser);
+
+		Response response = new Response("1", "SUCCESS");
+
+		return (response);
+
 	}
-	
-	
+
 }

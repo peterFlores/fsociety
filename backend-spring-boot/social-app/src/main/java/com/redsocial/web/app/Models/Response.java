@@ -1,5 +1,7 @@
 package com.redsocial.web.app.Models;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
@@ -11,6 +13,7 @@ public class Response {
 
 	private String Code;
 	private String Message;
+	private List <User> Users;
 	
 	@JsonInclude(JsonInclude.Include.NON_NULL)
 	private Object Data;
@@ -41,6 +44,17 @@ public class Response {
 	public void setData(Object data) {
 		Data = data;
 	}
+	
+	
+
+	public List<User> getUsers() {
+		return Users;
+	}
+
+	public void setUsers(List<User> users) {
+		Users = users;
+	}
+	
 
 	public Response(String code, String message, Object data) {
 		super();
@@ -54,6 +68,15 @@ public class Response {
 		this.Code = code;
 		this.Message = message;
 	}
+
+	public Response(String code, String message, List<User> users) {
+		super();
+		Code = code;
+		Message = message;
+		Users = users;
+	}
+
+	
 	
 	
 }
