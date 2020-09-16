@@ -18,6 +18,8 @@ public interface IUserService {
 	public List<User> listUsers();
 
 	public List<User> findByUserId(Integer idUser);
+	
+	public User findByUserId(Long id);
 
 	public List<User> findByUserMail(String email);
 

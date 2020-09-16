@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -23,6 +25,9 @@ import com.redsocial.web.app.Services.IUserService;
 
 @Service
 public class UserDAO implements IUserService {
+	
+	@Autowired
+	private IUserDAO userDao;
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -265,6 +270,12 @@ public class UserDAO implements IUserService {
 			SqlParameterSource src = new MapSqlParameterSource().addValues(Map);
 			jdbcCall.execute(src);
 			
+	}
+
+	@Override
+	public User findByUserId(Long id) {
+		// TODO Auto-generated method stub
+		return userDao.findById(id).orElseThrow(() -> new EntityNotFoundException("NO USER FOUND"));
 	}
 
 

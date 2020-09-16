@@ -1,41 +1,74 @@
 package com.redsocial.web.app.Models;
 
 import java.util.Date;
+import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonPropertyOrder({ "idUser", "userName", "userNickname", "userMail", "userPassword", "userImage", "userBirthDate",
 		"userGender", "userRole", "userCreatedAt", "userStatus" })
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@Entity
+@Table(name = "USERS", schema = "FSOCIETY")
 public class User {
 
+	@Id
+	@Column(name = "USER_ID")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idUser;
 
+	@Column(name = "USER_NAME")
 	private String userName;
 
+	@Column(name = "USER_NICKNAME")
 	private String userNickname;
 
+	@Column(name = "USER_MAIL")
 	private String userMail;
 
+	@Column(name = "USER_PASSWORD")
 	private String userPassword;
 
+	@Column(name = "USER_IMAGE_PATH")
 	private String userImage;
 
+	@Column(name = "USER_BIRTHDATE")
 	@JsonFormat(pattern = "YYYY-MM-DD")
 	private Date userBirthDate;
 
+	@Column(name = "USER_GENDER")
 	private String userGender;
 
+	@Column(name = "USER_ROLE")
 	private String userRole;
 
+	@Column(name = "USER_CREATED_AT")
 	@JsonFormat(pattern =  "MM/dd/yyyy hh:mm:ss a")
 	private Date userCreatedAt;
 
+	@Column(name = "USER_STATUS")
 	private String userStatus;
-
+	
+    @JsonManagedReference
+	@OneToMany(mappedBy = "user",fetch = FetchType.LAZY, orphanRemoval = true)
+    @OrderBy("createdAt DESC")
+	private Set<Post> posts;
+	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -144,6 +177,14 @@ public class User {
 
 	public void setUserStatus(String userStatus) {
 		this.userStatus = userStatus;
+	}
+
+	public Set<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(Set<Post> posts) {
+		this.posts = posts;
 	}
 
 }
