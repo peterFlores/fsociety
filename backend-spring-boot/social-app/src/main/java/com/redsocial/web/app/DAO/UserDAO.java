@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.redsocial.web.app.Models.User;
+import com.redsocial.web.app.Models.UserJPA;
 import com.redsocial.web.app.Services.IUserService;
 
 @Service
@@ -227,7 +228,7 @@ public class UserDAO implements IUserService {
 		return listUser;
 	}
 	@Override
-	public User findByUserId(Long id) {
+	public UserJPA findByUserId(Long id) {
 		// TODO Auto-generated method stub
 		return userDao.findById(id).orElseThrow(() -> new EntityNotFoundException("NO USER FOUND"));
 	}

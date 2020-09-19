@@ -22,6 +22,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.redsocial.web.app.Models.Response;
 import com.redsocial.web.app.Models.User;
+import com.redsocial.web.app.Models.UserJPA;
 import com.redsocial.web.app.Services.IUserService;
 
 
@@ -36,7 +37,7 @@ public class UserController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Response> getUserById(@PathVariable("id") Long id) {
 		try {
-			User user = service.findByUserId(id);
+			UserJPA user = service.findByUserId(id);
 			return ResponseEntity.ok().body(new Response("1", "SUCCESS", user));
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -50,7 +51,7 @@ public class UserController {
 
 	@PostMapping(value = "/createUser", consumes = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
-	public Response AddUser(@RequestBody User user) throws Exception {
+	public Response AddUser(User user) throws Exception {
 
 		Response response = null;
 		try {
@@ -70,7 +71,7 @@ public class UserController {
 
 	@PutMapping(value = "/updateUser/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
-	public Response updateUser(@PathVariable Integer id, @RequestBody User user) throws Exception {
+	public Response updateUser(@PathVariable Integer id, User user) throws Exception {
 
 		Response response = null;
 		try {

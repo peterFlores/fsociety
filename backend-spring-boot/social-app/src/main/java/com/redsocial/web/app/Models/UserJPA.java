@@ -23,40 +23,58 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		"userGender", "userRole", "userCreatedAt", "userStatus" })
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class User {
+@Entity
+@Table(name = "USERS", schema = "FSOCIETY")
+public class UserJPA {
 
+	@Id
+	@Column(name = "USER_ID")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idUser;
 
+	@Column(name = "USER_NAME")
 	private String userName;
 
+	@Column(name = "USER_NICKNAME")
 	private String userNickname;
 
+	@Column(name = "USER_MAIL")
 	private String userMail;
 
+	@Column(name = "USER_PASSWORD")
 	private String userPassword;
 
+	@Column(name = "USER_IMAGE_PATH")
 	private String userImage;
 
+	@Column(name = "USER_BIRTHDATE")
 	@JsonFormat(pattern = "YYYY-MM-DD")
 	private Date userBirthDate;
 
+	@Column(name = "USER_GENDER")
 	private String userGender;
 
+	@Column(name = "USER_ROLE")
 	private String userRole;
 
+	@Column(name = "USER_CREATED_AT")
 	@JsonFormat(pattern =  "MM/dd/yyyy hh:mm:ss a")
 	private Date userCreatedAt;
 
+	@Column(name = "USER_STATUS")
 	private String userStatus;
 	
- 
+    @JsonManagedReference
+	@OneToMany(mappedBy = "user",fetch = FetchType.LAZY, orphanRemoval = true)
+    @OrderBy("createdAt DESC")
+	private Set<Post> posts;
 	
-	public User() {
+	public UserJPA() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(Long idUser, String userName, String userNickname, String userMail, String userPassword,
+	public UserJPA(Long idUser, String userName, String userNickname, String userMail, String userPassword,
 			String userImage, Date userBirthDate, String userGender, String userRole, Date userCreatedAt,
 			String userStatus) {
 		super();
@@ -161,6 +179,12 @@ public class User {
 		this.userStatus = userStatus;
 	}
 
-	
+	public Set<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(Set<Post> posts) {
+		this.posts = posts;
+	}
 
 }

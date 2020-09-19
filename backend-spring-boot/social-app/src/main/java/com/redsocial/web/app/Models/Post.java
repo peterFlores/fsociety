@@ -46,7 +46,7 @@ public class Post implements Serializable {
 	@JsonBackReference
 	@ManyToOne
 	@JoinColumn(name = "USER_ID", nullable = false)
-	private User user;
+	private UserJPA user;
 	
 	@JsonBackReference
 	@ManyToOne(cascade=CascadeType.ALL)
@@ -98,12 +98,12 @@ public class Post implements Serializable {
 	}
 
 
-	public User getUser() {
+	public UserJPA getUser() {
 		return user;
 	}
 
 
-	public void setUser(User user) {
+	public void setUser(UserJPA user) {
 		this.user = user;
 	}
 

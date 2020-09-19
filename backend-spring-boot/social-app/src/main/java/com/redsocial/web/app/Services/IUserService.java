@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.redsocial.web.app.Models.User;
+import com.redsocial.web.app.Models.UserJPA;
 
 public interface IUserService {
 	
@@ -21,7 +22,7 @@ public interface IUserService {
 
 	public List<User> findByUserId(Integer idUser);
 	
-	public User findByUserId(Long id);
+	public UserJPA findByUserId(Long id);
 
 	// Search with LIKE on SQL.
 	
