@@ -1,5 +1,6 @@
 package com.redsocial.web.app.Models;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
@@ -22,8 +23,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ "idUser", "userName", "userNickname", "userMail", "userPassword", "userImage", "userBirthDate",
 		"userGender", "userRole", "userCreatedAt", "userStatus" })
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class User {
+public class User implements Serializable {
+
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9050053303622055999L;
 
 	private Long idUser;
 

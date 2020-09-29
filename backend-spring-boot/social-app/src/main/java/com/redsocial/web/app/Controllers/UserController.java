@@ -28,7 +28,6 @@ import com.redsocial.web.app.Services.IUserService;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("user")
 public class UserController {
 
 	@Autowired
@@ -118,12 +117,13 @@ public class UserController {
 	// Dont delete, implemented on oauth-service
 
 	@GetMapping("/search/email/{email}")
-	public Response FindUserEmail(@PathVariable("email") String email) {
+	public User FindUserEmail(@PathVariable("email") String email) {
 		List<User> userFound = service.findByUserMail(email);
-
+		System.out.println(userFound.get(0).getUserMail());
 		Response response = new Response("1", "SUCCESS", userFound);
-
-		return response;
+		
+		
+		return service.findByUserMail(email).get(0);
 	}
 
 	@PostMapping(value = "/upload/picture/{idUser}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
