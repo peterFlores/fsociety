@@ -18,7 +18,7 @@ public class Response implements Serializable {
 	private String Code;
 	private String Message;
 
-	@JsonInclude(JsonInclude.Include.NON_NULL)
+	//@JsonInclude(JsonInclude.Include.NON_NULL)
 	private List<User> Data;
 
 	public Response() {
@@ -58,6 +58,11 @@ public class Response implements Serializable {
 		// TODO Auto-generated constructor stub
 		this.Code = code;
 		this.Message = message;
+	}
+
+	@Override
+	public String toString() {
+		return "Response [Code=" + Code + ", Message=" + Message + ", Data=" + Data + "]";
 	}
 
 }

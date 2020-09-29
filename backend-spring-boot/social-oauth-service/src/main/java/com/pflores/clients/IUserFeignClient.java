@@ -5,10 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import com.pflores.models.Response;
+import com.pflores.models.User;
 
-@FeignClient(name = "social-app" ,url = "http://52.15.178.31:40000")
+@FeignClient(name = "social-app" ,url = "http://3.22.230.92:40000")
 public interface IUserFeignClient {
 
 	@GetMapping("/search/email/{email}")
-	public Response findByEmail(@PathVariable("email") String email);
+	public User findByEmail(@PathVariable("email") String email);
 }

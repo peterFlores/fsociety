@@ -2,20 +2,22 @@ package com.pflores.models;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-
-@JsonPropertyOrder({"idUser","userName","userNickname","userMail","userPassword","userImage",
-	"userBirthDate","userGender","userRole","userCreatedAt","userStatus"})
+@JsonPropertyOrder({ "idUser", "userName", "userNickname", "userMail", "userPassword", "userImage", "userBirthDate",
+		"userGender", "userRole", "userCreatedAt", "userStatus" })
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class User implements Serializable {
-	
-	
+
+
 	/**
 	 * 
 	 */
@@ -24,34 +26,33 @@ public class User implements Serializable {
 	private Long idUser;
 
 	private String userName;
-	
+
 	private String userNickname;
 
-	
 	private String userMail;
-	
+
 	private String userPassword;
-	
+
 	private String userImage;
 
-	@JsonFormat(pattern="DD-MM-YYYY")
+	@JsonFormat(pattern = "YYYY-MM-DD")
 	private Date userBirthDate;
 
 	private String userGender;
 
 	private String userRole;
 
-	@JsonFormat(pattern="DD-MM-YYYY")
+	@JsonFormat(pattern =  "MM/dd/yyyy hh:mm:ss a")
 	private Date userCreatedAt;
 
 	private String userStatus;
+	
+ 
 	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 	public User(Long idUser, String userName, String userNickname, String userMail, String userPassword,
 			String userImage, Date userBirthDate, String userGender, String userRole, Date userCreatedAt,
@@ -69,8 +70,6 @@ public class User implements Serializable {
 		this.userCreatedAt = userCreatedAt;
 		this.userStatus = userStatus;
 	}
-
-
 
 	public Long getIdUser() {
 		return idUser;
@@ -159,7 +158,7 @@ public class User implements Serializable {
 	public void setUserStatus(String userStatus) {
 		this.userStatus = userStatus;
 	}
-	
+
 	
 
 }
