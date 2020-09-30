@@ -33,7 +33,7 @@ public class UserController {
 	@Autowired
 	private IUserService service;
 
-	@GetMapping("/{id}")
+	@GetMapping("/search_user/{id}")
 	public ResponseEntity<Response> getUserById(@PathVariable("id") Long id) {
 		try {
 			UserJPA user = service.findByUserId(id);
