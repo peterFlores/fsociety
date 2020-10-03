@@ -1,0 +1,133 @@
+<div class="wrapper">
+  <div
+    class="page-header page-header-xs"
+    data-parallax="true"
+    style="background-image: url('https://picsum.photos/1920/1080')"
+  >
+    <div class="filter"></div>
+  </div>
+
+  <div class="section profile-content">
+    <div class="container">
+        <div class="main-body">
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img
+                      src="{{ user.userImage }}"
+                      alt="Admin"
+                      class="rounded-circle"
+                      width="150"
+                    />
+                    <div class="mt-2">
+                      <h4>{{ user.userNickname }}</h4>
+                      <p class="text-secondary mb-1">{{ user.userStatus }}</p>
+                      <button class="btn btn-primary">UPDATE MY INFO</button>
+                      <button class="btn btn-outline-primary">MESSAGE</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-3">
+                  <div class="card-header">PROFILE INFO</div>
+                <div class="card-body">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <h6 class="mb-0">Full Name</h6>
+                      </div>
+                      <div class="text-secondary">
+                        {{ user.userName }}
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <h6 class="mb-0">Email</h6>
+                      </div>
+                      <div class="text-secondary">
+                        {{ user.userMail }}
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <h6 class="mb-0">Gender</h6>
+                      </div>
+                      <div class="text-secondary">
+                        {{ user.userGender }}
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <h6 class="mb-0">Birthdate</h6>
+                      </div>
+                      <div class="text-secondary">
+                        {{ user.userBirthDate }}
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header">POSTS</div>
+                <div class="card-body">
+                  <div class="form-group">
+                      <label for="post">What's on your mind?</label>
+                      <textarea class="form-control" name="post" id="" cols="30" rows="3">Write something...</textarea>
+                  </div>
+                  <div class="float-right">
+                      <button class="btn btn-primary">POST IT!</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="card-header">
+                  <h5 class="h3 mb-0">Activity feed</h5>
+                </div>
+                <ng-container *ngFor="let item of user.posts">
+                  <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                      <div class="d-flex align-items-center">
+                        <a href="javascript:void(0)">
+                          <img class="avatar" src="{{ user.userImage }}" />
+                        </a>
+    
+                        <div class="mx-3">
+                          <a
+                            class="text-dark font-weight-600 text-sm"
+                            href="javascript:void(0)"
+                          >
+                            {{ user.userNickname }}
+                          </a>
+    
+                          <small class="d-block text-muted">
+                            {{ item.createdAt | date: "dd/mm/yy hh:mm:ss" }}</small
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <p class="mb-4">
+                        {{ item.content }}
+                      </p>
+                      <img
+                        alt="Image placeholder"
+                        class="img-fluid rounded"
+                        src="{{ item.imagePath }}"
+                      />
+                    </div>
+                    
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
