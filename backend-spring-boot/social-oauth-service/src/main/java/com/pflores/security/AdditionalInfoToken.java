@@ -27,6 +27,7 @@ public class AdditionalInfoToken implements TokenEnhancer {
 		info.put("profile_picture", user.getUserImage());
 		info.put("created_at", user.getUserCreatedAt());
 		((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(info);
+		
 		return accessToken;
 	}
 
