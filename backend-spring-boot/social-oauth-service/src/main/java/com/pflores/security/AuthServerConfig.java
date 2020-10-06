@@ -51,8 +51,8 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 		chain.setTokenEnhancers(Arrays.asList(additionalInfo, accessTokenConverter()));
 		endpoints.authenticationManager(authenticationManager)
 			.tokenStore(tokenStore())
-			.accessTokenConverter(accessTokenConverter())
-			.tokenEnhancer(chain);
+			.accessTokenConverter(accessTokenConverter()).tokenEnhancer(chain);
+			//.tokenEnhancer(chain);
 	}
 
 	@Bean
