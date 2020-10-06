@@ -69,11 +69,11 @@ public class Response {
 		this.Message = message;
 	}
 
-	public Response(String code, String message, List<User> users) {
+	public Response(String code, String message, List<User> data) {
 		super();
 		Code = code;
 		Message = message;
-		Users = users;
+		Users = data;
 	}
 
 	
