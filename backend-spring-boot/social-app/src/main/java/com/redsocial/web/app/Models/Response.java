@@ -13,7 +13,6 @@ public class Response {
 
 	private String Code;
 	private String Message;
-	private List <User> Users;
 	
 	@JsonInclude(JsonInclude.Include.NON_NULL)
 	private Object Data;
@@ -47,15 +46,6 @@ public class Response {
 	
 	
 
-	public List<User> getUsers() {
-		return Users;
-	}
-
-	public void setUsers(List<User> users) {
-		Users = users;
-	}
-	
-
 	public Response(String code, String message, Object data) {
 		super();
 		this.Code = code;
@@ -69,13 +59,7 @@ public class Response {
 		this.Message = message;
 	}
 
-	public Response(String code, String message, List<User> data) {
-		super();
-		Code = code;
-		Message = message;
-		Users = data;
-	}
-
+	
 	
 	
 	
