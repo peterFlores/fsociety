@@ -11,7 +11,7 @@ import com.redsocial.web.app.Services.IVisitiService;
 
 @RestController
 @CrossOrigin(origins = "*")
-public class visitController {
+public class VisitController {
 	@Autowired
 	private IVisitiService service;	
 	
@@ -20,7 +20,7 @@ public class visitController {
 
 		Response response = null;
 		try {
-			service.createVisit(idVisitor, idVisitor);
+			service.createVisit(id, idVisitor);
 
 			response = new Response("1", "SUCCESS");
 		} catch (Exception e) {
