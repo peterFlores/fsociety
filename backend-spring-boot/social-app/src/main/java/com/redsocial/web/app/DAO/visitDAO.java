@@ -23,10 +23,9 @@ public class visitDAO implements IVisitiService {
 	
 	@Transactional
 	@Override
-	public void createVisit(Integer id, Integer idVisitor) {
+	public void createVisit(Visit visit) {
 		// TODO Auto-generated method stub
 	
-	Visit visit = new Visit();
 	jdbcCall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("REGISTER_VISIT");
 	Map<String, Object> Map = new HashMap<String, Object>();
 	Map.put("PUSER_ID", visit.getIdUser());
