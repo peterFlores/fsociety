@@ -29,7 +29,7 @@ public class visitDAO implements IVisitiService {
 	Visit visit = new Visit();
 	jdbcCall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("REGISTRER_VISIT");
 	Map<String, Object> Map = new HashMap<String, Object>();
-	Map.put("PUSER_ID", visit.getIdUser().getIdUser());
+	Map.put("PUSER_ID", visit.getIdUser());
 	Map.put("PUSER_ID_VISITOR", visit.getIdVisitor());
 
 	SqlParameterSource src = new MapSqlParameterSource().addValues(Map);

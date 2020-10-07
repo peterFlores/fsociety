@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class Visit {
 
-	private User idUser;
+	private Long idUser;
 	@JsonFormat(pattern = "MM/dd/yyyy hh:mm:ss a")
 	private Date vistDate;
 	private Long idVisitor;
@@ -18,7 +18,7 @@ public class Visit {
 	}
 	
 	
-	public Visit(User idUser, Date vistDate, Long idVisitor) {
+	public Visit(Long idUser, Date vistDate, Long idVisitor) {
 		super();
 		this.idUser = idUser;
 		this.vistDate = vistDate;
@@ -26,10 +26,10 @@ public class Visit {
 	}
 
 
-	public User getIdUser() {
+	public Long getIdUser() {
 		return idUser;
 	}
-	public void setIdUser(User idUser) {
+	public void setIdUser(Long idUser) {
 		this.idUser = idUser;
 	}
 	public Date getVistDate() {
