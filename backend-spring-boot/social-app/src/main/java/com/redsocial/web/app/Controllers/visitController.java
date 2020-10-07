@@ -15,7 +15,7 @@ public class visitController {
 	@Autowired
 	private IVisitiService service;	
 	
-	@PutMapping(value = "/vistit/{id}/{idVisitor}")
+	@PutMapping(value = "/visit/{id}/{idVisitor}")
 	public Response createVisit(@PathVariable Integer id, Integer idVisitor) throws Exception {
 
 		Response response = null;

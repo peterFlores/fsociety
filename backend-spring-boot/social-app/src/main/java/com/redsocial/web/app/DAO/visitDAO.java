@@ -27,7 +27,7 @@ public class visitDAO implements IVisitiService {
 		// TODO Auto-generated method stub
 	
 	Visit visit = new Visit();
-	jdbcCall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("REGISTRER_VISIT");
+	jdbcCall = new SimpleJdbcCall(jdbcTemplate).withProcedureName("REGISTER_VISIT");
 	Map<String, Object> Map = new HashMap<String, Object>();
 	Map.put("PUSER_ID", visit.getIdUser());
 	Map.put("PUSER_ID_VISITOR", visit.getIdVisitor());
