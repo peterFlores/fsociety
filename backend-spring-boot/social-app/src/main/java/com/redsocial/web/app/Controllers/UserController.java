@@ -43,6 +43,7 @@ public class UserController {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new Response("-1", "ERROR"));
 		}
 	}
+	
 	@GetMapping("/listUser")
 	public List<User> listUsers() {
 		return service.listUsers();

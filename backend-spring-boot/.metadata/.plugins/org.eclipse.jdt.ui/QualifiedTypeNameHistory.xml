@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
 <fullyQualifiedTypeName name="com.redsocial.web.app.Services.IEstudianteService"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
@@ -17,7 +14,6 @@
 <fullyQualifiedTypeName name="org.apache.tomcat.jni.File"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
-<fullyQualifiedTypeName name="org.springframework.jdbc.core.simple.SimpleJdbcCall"/>
 <fullyQualifiedTypeName name="org.springframework.data.crossstore.HashMapChangeSet"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.namedparam.SqlParameterSource"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.namedparam.MapSqlParameterSource"/>
@@ -30,4 +26,14 @@
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.BeanPropertyRowMapper"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.support.RedirectAttributes"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.redsocial.web.app.Models.User"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.simple.SimpleJdbcCall"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+<fullyQualifiedTypeName name="com.redsocial.web.app.Services.IVisitiService"/>
+<fullyQualifiedTypeName name="com.redsocial.web.app.Models.Visit"/>
 </qualifiedTypeNameHistroy>

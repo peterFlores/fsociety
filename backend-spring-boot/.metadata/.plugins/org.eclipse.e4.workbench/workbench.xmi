@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_bDwkke-jEeq2heCekMy5aA" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_bDwkku-jEeq2heCekMy5aA" bindingContexts="_bDwkm--jEeq2heCekMy5aA">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserController.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Controllers/UserController.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Controllers/UserController.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserDAO.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/DAO/UserDAO.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/DAO/UserDAO.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IUserDAO.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/DAO/IUserDAO.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/DAO/IUserDAO.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserJPA.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/UserJPA.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/UserJPA.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;User.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/User.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/User.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Response.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/Response.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/Response.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IPostService.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Services/IPostService.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Services/IPostService.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;SpringBootPropertyEditor&quot; name=&quot;application.properties&quot; tooltip=&quot;social-app/src/main/resources/application.properties&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/resources/application.properties&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserService.java&quot; tooltip=&quot;social-oauth-service/src/main/java/com/pflores/services/UserService.java&quot;>&#xA;&lt;persistable path=&quot;/social-oauth-service/src/main/java/com/pflores/services/UserService.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SpringSecurityConfig.java&quot; tooltip=&quot;social-oauth-service/src/main/java/com/pflores/security/SpringSecurityConfig.java&quot;>&#xA;&lt;persistable path=&quot;/social-oauth-service/src/main/java/com/pflores/security/SpringSecurityConfig.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AuthServerConfig.java&quot; tooltip=&quot;social-oauth-service/src/main/java/com/pflores/security/AuthServerConfig.java&quot;>&#xA;&lt;persistable path=&quot;/social-oauth-service/src/main/java/com/pflores/security/AuthServerConfig.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IUserFeignClient.java&quot; tooltip=&quot;social-oauth-service/src/main/java/com/pflores/clients/IUserFeignClient.java&quot;>&#xA;&lt;persistable path=&quot;/social-oauth-service/src/main/java/com/pflores/clients/IUserFeignClient.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Estudiante.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/Estudiante.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/Estudiante.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor&quot; name=&quot;Social - ER.sql&quot; tooltip=&quot;social-app/src/main/resources/static/Social - ER.sql&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/resources/static/Social - ER.sql&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;EstudianteDAO.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/DAO/EstudianteDAO.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/DAO/EstudianteDAO.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IUserService.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Services/IUserService.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Services/IUserService.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;EstudianteController.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Controllers/EstudianteController.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Controllers/EstudianteController.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IEstudianteService.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Services/IEstudianteService.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Services/IEstudianteService.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SocialAppApplication.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/SocialAppApplication.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/SocialAppApplication.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;User.java&quot; tooltip=&quot;social-oauth-service/src/main/java/com/pflores/models/User.java&quot;>&#xA;&lt;persistable path=&quot;/social-oauth-service/src/main/java/com/pflores/models/User.java&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;visitDAO.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/DAO/visitDAO.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/DAO/visitDAO.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;visitController.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Controllers/visitController.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Controllers/visitController.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserController.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Controllers/UserController.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Controllers/UserController.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Post.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/Post.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/Post.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IPostDAO.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/DAO/IPostDAO.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/DAO/IPostDAO.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserDAO.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/DAO/UserDAO.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/DAO/UserDAO.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IUserService.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Services/IUserService.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Services/IUserService.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IVisitiService.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Services/IVisitiService.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Services/IVisitiService.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Visits.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/Visits.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/Visits.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;User.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/User.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/User.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor&quot; name=&quot;Social - ER.sql&quot; tooltip=&quot;social-app/src/main/resources/static/Social - ER.sql&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/resources/static/Social - ER.sql&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IUserDAO.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/DAO/IUserDAO.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/DAO/IUserDAO.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserJPA.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/UserJPA.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/UserJPA.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Response.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/Response.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/Response.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IPostService.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Services/IPostService.java&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/java/com/redsocial/web/app/Services/IPostService.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;SpringBootPropertyEditor&quot; name=&quot;application.properties&quot; tooltip=&quot;social-app/src/main/resources/application.properties&quot;>&#xA;&lt;persistable path=&quot;/social-app/src/main/resources/application.properties&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserService.java&quot; tooltip=&quot;social-oauth-service/src/main/java/com/pflores/services/UserService.java&quot;>&#xA;&lt;persistable path=&quot;/social-oauth-service/src/main/java/com/pflores/services/UserService.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SpringSecurityConfig.java&quot; tooltip=&quot;social-oauth-service/src/main/java/com/pflores/security/SpringSecurityConfig.java&quot;>&#xA;&lt;persistable path=&quot;/social-oauth-service/src/main/java/com/pflores/security/SpringSecurityConfig.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AuthServerConfig.java&quot; tooltip=&quot;social-oauth-service/src/main/java/com/pflores/security/AuthServerConfig.java&quot;>&#xA;&lt;persistable path=&quot;/social-oauth-service/src/main/java/com/pflores/security/AuthServerConfig.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IUserFeignClient.java&quot; tooltip=&quot;social-oauth-service/src/main/java/com/pflores/clients/IUserFeignClient.java&quot;>&#xA;&lt;persistable path=&quot;/social-oauth-service/src/main/java/com/pflores/clients/IUserFeignClient.java&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>ModelMigrationProcessor.001</tags>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_bDwkku-jEeq2heCekMy5aA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_b_0kMu-jEeq2heCekMy5aA" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1920" height="826">
@@ -247,7 +247,7 @@
           <tags>persp.actionSet:org.eclipse.debug.ui.debugActionSet</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_00lkse-rEeq4EpptcXlxlQ" selectedElement="_00lkv--rEeq4EpptcXlxlQ" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_00lksu-rEeq4EpptcXlxlQ" containerData="2011" selectedElement="_AwGasPOtEeqLVPGNj7nOvA">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_AwGasPOtEeqLVPGNj7nOvA" containerData="6000" selectedElement="_00lkuu-rEeq4EpptcXlxlQ">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_AwGasPOtEeqLVPGNj7nOvA" containerData="6000" selectedElement="_00lktO-rEeq4EpptcXlxlQ">
                 <children xsi:type="basic:PartStack" xmi:id="_00lktO-rEeq4EpptcXlxlQ" elementId="left" containerData="5000" selectedElement="_00lkuO-rEeq4EpptcXlxlQ">
                   <tags>org.eclipse.e4.primaryNavigationStack</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_00lkte-rEeq4EpptcXlxlQ" elementId="org.eclipse.jdt.ui.PackageExplorer" toBeRendered="false" ref="_00LVAO-rEeq4EpptcXlxlQ" closeable="true">
@@ -364,84 +364,110 @@
       <tags>View</tags>
       <tags>categoryTag:Help</tags>
     </sharedElements>
-    <sharedElements xsi:type="advanced:Area" xmi:id="_cSbXIO-jEeq2heCekMy5aA" elementId="org.eclipse.ui.editorss" selectedElement="_00lkyu-rEeq4EpptcXlxlQ">
-      <children xsi:type="basic:PartStack" xmi:id="_00lkyu-rEeq4EpptcXlxlQ" elementId="bottom" selectedElement="_TKnEAAd-EeuANfUSTQbuvw">
-        <tags>org.eclipse.e4.secondaryDataStack</tags>
-        <tags>Debug</tags>
-        <tags>active</tags>
-        <children xsi:type="advanced:Placeholder" xmi:id="_00lky--rEeq4EpptcXlxlQ" elementId="org.eclipse.ui.views.ProblemView" ref="_cdq90e-jEeq2heCekMy5aA" closeable="true">
-          <tags>View</tags>
-          <tags>categoryTag:General</tags>
+    <sharedElements xsi:type="advanced:Area" xmi:id="_cSbXIO-jEeq2heCekMy5aA" elementId="org.eclipse.ui.editorss" selectedElement="_KYtEQAhUEeu_rOVwA9pfSQ">
+      <children xsi:type="basic:PartSashContainer" xmi:id="_KYtEQAhUEeu_rOVwA9pfSQ" selectedElement="_wvNFEAhUEeu_rOVwA9pfSQ">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_wvNFEAhUEeu_rOVwA9pfSQ" containerData="7933" selectedElement="_wvNFEQhUEeu_rOVwA9pfSQ" horizontal="true">
+          <children xsi:type="basic:PartStack" xmi:id="_KYtEQQhUEeu_rOVwA9pfSQ" elementId="PartStack@643c5b25" containerData="5000" selectedElement="_CPakwAhbEeu_rOVwA9pfSQ">
+            <children xsi:type="basic:Part" xmi:id="_Jw9u0AhUEeu_rOVwA9pfSQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Social - ER.sql" iconURI="platform:/plugin/org.eclipse.datatools.sqltools.sqlscrapbook/images/qrydoc.gif" closeable="true">
+              <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor&quot; name=&quot;Social - ER.sql&quot; partName=&quot;Social - ER.sql&quot; title=&quot;Social - ER.sql&quot; tooltip=&quot;social-app/src/main/resources/static/Social - ER.sql&quot;>&#xA;&lt;input connInfoName=&quot;Undefined:::&quot; editorInputType=&quot;SQLScrapbookEditorInput&quot; factoryID=&quot;org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory&quot; path=&quot;/social-app/src/main/resources/static/Social - ER.sql&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2917&quot; selectionTopPixel=&quot;1275&quot;/>&#xA;&lt;/editor>"/>
+              <tags>Editor</tags>
+              <tags>removeOnHide</tags>
+              <tags>org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor</tags>
+            </children>
+            <children xsi:type="basic:Part" xmi:id="_lviSgAhUEeu_rOVwA9pfSQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Visit.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+              <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Visit.java&quot; partName=&quot;Visit.java&quot; title=&quot;Visit.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/Visit.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/Visit.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;338&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+              <tags>Editor</tags>
+              <tags>removeOnHide</tags>
+              <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+            </children>
+            <children xsi:type="basic:Part" xmi:id="_rxy6cAhVEeu_rOVwA9pfSQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="IVisitiService.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+              <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IVisitiService.java&quot; partName=&quot;IVisitiService.java&quot; title=&quot;IVisitiService.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Services/IVisitiService.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Services/IVisitiService.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;138&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+              <tags>Editor</tags>
+              <tags>removeOnHide</tags>
+              <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+            </children>
+            <children xsi:type="basic:Part" xmi:id="_QDNWsAhZEeu_rOVwA9pfSQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="visitController.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+              <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;visitController.java&quot; partName=&quot;visitController.java&quot; title=&quot;visitController.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Controllers/visitController.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Controllers/visitController.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;440&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+              <tags>Editor</tags>
+              <tags>removeOnHide</tags>
+              <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+            </children>
+            <children xsi:type="basic:Part" xmi:id="_CPakwAhbEeu_rOVwA9pfSQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="visitDAO.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+              <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;visitDAO.java&quot; partName=&quot;visitDAO.java&quot; title=&quot;visitDAO.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/DAO/visitDAO.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/DAO/visitDAO.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1258&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+              <tags>Editor</tags>
+              <tags>removeOnHide</tags>
+              <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+            </children>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_wvNFEQhUEeu_rOVwA9pfSQ" elementId="PartStack@1aa6f099" containerData="5000" selectedElement="_B2qYcAhZEeu_rOVwA9pfSQ">
+            <tags>active</tags>
+            <children xsi:type="basic:Part" xmi:id="_wZc3gAhUEeu_rOVwA9pfSQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="User.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+              <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;User.java&quot; partName=&quot;User.java&quot; title=&quot;User.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/User.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/User.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;76&quot; selectionOffset=&quot;1317&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+              <tags>Editor</tags>
+              <tags>removeOnHide</tags>
+              <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+            </children>
+            <children xsi:type="basic:Part" xmi:id="_tmLpMAhVEeu_rOVwA9pfSQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="IUserService.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+              <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IUserService.java&quot; partName=&quot;IUserService.java&quot; title=&quot;IUserService.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Services/IUserService.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Services/IUserService.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+              <tags>Editor</tags>
+              <tags>removeOnHide</tags>
+              <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+            </children>
+            <children xsi:type="basic:Part" xmi:id="_Ir__8AhWEeu_rOVwA9pfSQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="UserDAO.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+              <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserDAO.java&quot; partName=&quot;UserDAO.java&quot; title=&quot;UserDAO.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/DAO/UserDAO.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/DAO/UserDAO.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2118&quot; selectionTopPixel=&quot;2801&quot;/>&#xA;&lt;/editor>"/>
+              <tags>Editor</tags>
+              <tags>removeOnHide</tags>
+              <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+            </children>
+            <children xsi:type="basic:Part" xmi:id="_B2qYcAhZEeu_rOVwA9pfSQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="UserController.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+              <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserController.java&quot; partName=&quot;UserController.java&quot; title=&quot;UserController.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Controllers/UserController.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Controllers/UserController.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;122&quot; selectionOffset=&quot;655&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+              <tags>Editor</tags>
+              <tags>removeOnHide</tags>
+              <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+              <tags>active</tags>
+              <tags>activeOnClose</tags>
+            </children>
+          </children>
         </children>
-        <children xsi:type="advanced:Placeholder" xmi:id="_00lkzO-rEeq4EpptcXlxlQ" elementId="org.eclipse.jdt.ui.JavadocView" ref="_00O_YO-rEeq4EpptcXlxlQ" closeable="true">
-          <tags>View</tags>
-          <tags>categoryTag:Java</tags>
-        </children>
-        <children xsi:type="advanced:Placeholder" xmi:id="_00lkze-rEeq4EpptcXlxlQ" elementId="org.eclipse.jdt.ui.SourceView" ref="_00PmcO-rEeq4EpptcXlxlQ" closeable="true">
-          <tags>View</tags>
-          <tags>categoryTag:Java</tags>
-        </children>
-        <children xsi:type="advanced:Placeholder" xmi:id="_00lkzu-rEeq4EpptcXlxlQ" elementId="org.eclipse.search.ui.views.SearchView" toBeRendered="false" ref="_cdsL8u-jEeq2heCekMy5aA" closeable="true">
-          <tags>View</tags>
-          <tags>categoryTag:General</tags>
-        </children>
-        <children xsi:type="advanced:Placeholder" xmi:id="_00lkz--rEeq4EpptcXlxlQ" elementId="org.eclipse.ui.console.ConsoleView" ref="_cdrk4O-jEeq2heCekMy5aA" closeable="true">
-          <tags>View</tags>
-          <tags>categoryTag:General</tags>
-        </children>
-        <children xsi:type="advanced:Placeholder" xmi:id="_00lk0O-rEeq4EpptcXlxlQ" elementId="org.eclipse.ui.views.BookmarkView" toBeRendered="false" ref="_cdsL8O-jEeq2heCekMy5aA" closeable="true">
-          <tags>View</tags>
-          <tags>categoryTag:General</tags>
-        </children>
-        <children xsi:type="advanced:Placeholder" xmi:id="_00lk0e-rEeq4EpptcXlxlQ" elementId="org.eclipse.ui.views.ProgressView" ref="_cdsL8e-jEeq2heCekMy5aA" closeable="true">
-          <tags>View</tags>
-          <tags>categoryTag:General</tags>
-        </children>
-        <children xsi:type="advanced:Placeholder" xmi:id="_00lk0u-rEeq4EpptcXlxlQ" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView" toBeRendered="false" ref="_00hTQe-rEeq4EpptcXlxlQ" closeable="true">
-          <tags>View</tags>
-          <tags>categoryTag:Terminal</tags>
-        </children>
-        <children xsi:type="advanced:Placeholder" xmi:id="_m0bawfMbEeqMBbRqfVXs5w" elementId="org.eclipse.debug.ui.DebugView" ref="_m0bawPMbEeqMBbRqfVXs5w" closeable="true">
-          <tags>View</tags>
-          <tags>categoryTag:Debug</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_Grl-kAd-EeuANfUSTQbuvw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Response.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Response.java&quot; partName=&quot;Response.java&quot; title=&quot;Response.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/Response.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/Response.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1371&quot; selectionTopPixel=&quot;223&quot;/>&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_MklLMAd-EeuANfUSTQbuvw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="User.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;User.java&quot; partName=&quot;User.java&quot; title=&quot;User.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/User.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/User.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;1273&quot;/>&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_NV9k0Ad-EeuANfUSTQbuvw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="UserJPA.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserJPA.java&quot; partName=&quot;UserJPA.java&quot; title=&quot;UserJPA.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Models/UserJPA.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Models/UserJPA.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;1539&quot;/>&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_O_V9cAd-EeuANfUSTQbuvw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="IUserDAO.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IUserDAO.java&quot; partName=&quot;IUserDAO.java&quot; title=&quot;IUserDAO.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/DAO/IUserDAO.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/DAO/IUserDAO.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_PVnvcAd-EeuANfUSTQbuvw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="UserDAO.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserDAO.java&quot; partName=&quot;UserDAO.java&quot; title=&quot;UserDAO.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/DAO/UserDAO.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/DAO/UserDAO.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;2589&quot;/>&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_TKnEAAd-EeuANfUSTQbuvw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="UserController.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserController.java&quot; partName=&quot;UserController.java&quot; title=&quot;UserController.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Controllers/UserController.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Controllers/UserController.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3261&quot; selectionTopPixel=&quot;783&quot;/>&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
+        <children xsi:type="basic:PartStack" xmi:id="_00lkyu-rEeq4EpptcXlxlQ" elementId="bottom" containerData="2067" selectedElement="_00lkz--rEeq4EpptcXlxlQ">
+          <tags>org.eclipse.e4.secondaryDataStack</tags>
+          <tags>Debug</tags>
+          <children xsi:type="advanced:Placeholder" xmi:id="_00lky--rEeq4EpptcXlxlQ" elementId="org.eclipse.ui.views.ProblemView" ref="_cdq90e-jEeq2heCekMy5aA" closeable="true">
+            <tags>View</tags>
+            <tags>categoryTag:General</tags>
+          </children>
+          <children xsi:type="advanced:Placeholder" xmi:id="_00lkzO-rEeq4EpptcXlxlQ" elementId="org.eclipse.jdt.ui.JavadocView" ref="_00O_YO-rEeq4EpptcXlxlQ" closeable="true">
+            <tags>View</tags>
+            <tags>categoryTag:Java</tags>
+          </children>
+          <children xsi:type="advanced:Placeholder" xmi:id="_00lkze-rEeq4EpptcXlxlQ" elementId="org.eclipse.jdt.ui.SourceView" ref="_00PmcO-rEeq4EpptcXlxlQ" closeable="true">
+            <tags>View</tags>
+            <tags>categoryTag:Java</tags>
+          </children>
+          <children xsi:type="advanced:Placeholder" xmi:id="_00lkzu-rEeq4EpptcXlxlQ" elementId="org.eclipse.search.ui.views.SearchView" toBeRendered="false" ref="_cdsL8u-jEeq2heCekMy5aA" closeable="true">
+            <tags>View</tags>
+            <tags>categoryTag:General</tags>
+          </children>
+          <children xsi:type="advanced:Placeholder" xmi:id="_00lkz--rEeq4EpptcXlxlQ" elementId="org.eclipse.ui.console.ConsoleView" ref="_cdrk4O-jEeq2heCekMy5aA" closeable="true">
+            <tags>View</tags>
+            <tags>categoryTag:General</tags>
+          </children>
+          <children xsi:type="advanced:Placeholder" xmi:id="_00lk0O-rEeq4EpptcXlxlQ" elementId="org.eclipse.ui.views.BookmarkView" toBeRendered="false" ref="_cdsL8O-jEeq2heCekMy5aA" closeable="true">
+            <tags>View</tags>
+            <tags>categoryTag:General</tags>
+          </children>
+          <children xsi:type="advanced:Placeholder" xmi:id="_00lk0e-rEeq4EpptcXlxlQ" elementId="org.eclipse.ui.views.ProgressView" ref="_cdsL8e-jEeq2heCekMy5aA" closeable="true">
+            <tags>View</tags>
+            <tags>categoryTag:General</tags>
+          </children>
+          <children xsi:type="advanced:Placeholder" xmi:id="_00lk0u-rEeq4EpptcXlxlQ" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView" toBeRendered="false" ref="_00hTQe-rEeq4EpptcXlxlQ" closeable="true">
+            <tags>View</tags>
+            <tags>categoryTag:Terminal</tags>
+          </children>
+          <children xsi:type="advanced:Placeholder" xmi:id="_m0bawfMbEeqMBbRqfVXs5w" elementId="org.eclipse.debug.ui.DebugView" ref="_m0bawPMbEeqMBbRqfVXs5w" closeable="true">
+            <tags>View</tags>
+            <tags>categoryTag:Debug</tags>
+          </children>
         </children>
       </children>
     </sharedElements>
@@ -520,7 +546,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_cdq90e-jEeq2heCekMy5aA" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.ProblemsView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xA;&lt;expanded>&#xA;&lt;category IMemento.internal.id=&quot;Errors&quot;/>&#xA;&lt;category IMemento.internal.id=&quot;Errors (4 items)&quot;/>&#xA;&lt;category IMemento.internal.id=&quot;Warnings&quot;/>&#xA;&lt;/expanded>&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xA;&lt;expanded>&#xA;&lt;category IMemento.internal.id=&quot;Warnings (20 items)&quot;/>&#xA;&lt;category IMemento.internal.id=&quot;Warnings&quot;/>&#xA;&lt;/expanded>&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_1AcPYO-rEeq4EpptcXlxlQ" elementId="org.eclipse.ui.views.ProblemView">
@@ -545,7 +571,7 @@
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_3qTNke-rEeq4EpptcXlxlQ" elementId="org.eclipse.ui.console.ConsoleView" visible="false"/>
+      <toolbar xmi:id="_3qTNke-rEeq4EpptcXlxlQ" elementId="org.eclipse.ui.console.ConsoleView"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_cdsL8O-jEeq2heCekMy5aA" elementId="org.eclipse.ui.views.BookmarkView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Bookmarks" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/bkmrk_nav.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.BookmarksView"/>
@@ -692,7 +718,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_cD8PMO-jEeq2heCekMy5aA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_BWqhQAd-EeuANfUSTQbuvw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_bFJr2u-jEeq2heCekMy5aA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="__0bNMAhTEeu_rOVwA9pfSQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_bFJr2u-jEeq2heCekMy5aA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_cD82QO-jEeq2heCekMy5aA" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -732,7 +758,10 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_cD9dUO-jEeq2heCekMy5aA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_BWs9gAd-EeuANfUSTQbuvw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_bFIdv--jEeq2heCekMy5aA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="__0e3kAhTEeu_rOVwA9pfSQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_bFIdv--jEeq2heCekMy5aA"/>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_AVqSAAhUEeu_rOVwA9pfSQ" elementId="org.eclipse.jdt.ui.CompilationUnitEditor" visible="false">
+        <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_cD9dUe-jEeq2heCekMy5aA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1097,7 +1126,7 @@
     </bindings>
     <bindings xmi:id="_bGgWne-jEeq2heCekMy5aA" keySequence="ALT+SHIFT+D B" command="_bFK53--jEeq2heCekMy5aA"/>
     <bindings xmi:id="_bGg9oe-jEeq2heCekMy5aA" keySequence="ALT+SHIFT+D R" command="_bFDlS--jEeq2heCekMy5aA"/>
-    <bindings xmi:id="_A8rT8Ad-EeuANfUSTQbuvw" keySequence="COMMAND+CTRL+F" command="_bHktkO-jEeq2heCekMy5aA">
+    <bindings xmi:id="__ZgLwAhTEeu_rOVwA9pfSQ" keySequence="COMMAND+CTRL+F" command="_bHktkO-jEeq2heCekMy5aA">
       <tags>deleted</tags>
     </bindings>
   </bindingTables>
@@ -1636,7 +1665,7 @@
     <bindings xmi:id="_bGg9oO-jEeq2heCekMy5aA" keySequence="COMMAND+CR" command="_bE7pXu-jEeq2heCekMy5aA"/>
   </bindingTables>
   <bindingTables xmi:id="_bHl7sO-jEeq2heCekMy5aA" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_bDwknu-jEeq2heCekMy5aA">
-    <bindings xmi:id="_A8r7AAd-EeuANfUSTQbuvw" keySequence="M1+W" command="_bHlUou-jEeq2heCekMy5aA">
+    <bindings xmi:id="__Zgy0AhTEeu_rOVwA9pfSQ" keySequence="M1+W" command="_bHlUou-jEeq2heCekMy5aA">
       <tags>deleted</tags>
     </bindings>
   </bindingTables>
@@ -3774,7 +3803,7 @@
   <addons xmi:id="_bDxLo--jEeq2heCekMy5aA" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_bDxLpO-jEeq2heCekMy5aA" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_bECRYO-jEeq2heCekMy5aA" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="__ZMpwQhTEeu_rOVwA9pfSQ" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <addons xmi:id="_bHi4YO-jEeq2heCekMy5aA" elementId="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.CocoaUIHandler" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.cocoa.CocoaUIHandler"/>
   <categories xmi:id="_bE1ioO-jEeq2heCekMy5aA" elementId="org.springframework.tooling.ls.eclipse.gotosymbol.commands.category" name="STS4"/>
