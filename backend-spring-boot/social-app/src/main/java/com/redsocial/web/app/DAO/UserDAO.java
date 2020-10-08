@@ -278,8 +278,11 @@ public class UserDAO implements IUserService {
 			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
 				User user = new User();
 
+				user.setIdUser(rs.getLong("USER_ID"));
 				user.setUserName(rs.getString("USER_NAME"));
 				user.setUserImage(rs.getString("USER_IMAGE_PATH"));
+				user.setUserCreatedAt(rs.getDate("USER_CREATED_AT"));
+				user.setUserStatus(rs.getString("USER_STATUS"));
 
 
 				return user;
