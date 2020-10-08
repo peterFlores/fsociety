@@ -36,5 +36,9 @@ public interface IUserService {
 	
 	public void updatePicture(MultipartFile picture, Long idUser) throws IllegalStateException, IOException;
 	
+	//List top 5
+	
+	public List<User> listTop5();
+
 
 }

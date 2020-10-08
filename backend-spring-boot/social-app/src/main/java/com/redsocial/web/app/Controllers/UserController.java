@@ -139,5 +139,11 @@ public class UserController {
 		return (response);
 
 	}
-
+	
+	
+	
+	@GetMapping("/listTop5")
+	public List<User> listTop5() {
+		return service.listTop5();
+	}
 }
