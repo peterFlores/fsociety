@@ -51,10 +51,10 @@ public class PostController {
 	public Response createPost(@RequestBody PostJDBC post) throws Exception {
 
 		Response response = null;
-		
+		String imageName = java.util.UUID.randomUUID().toString();
 		String imagenB64 = post.getImagePath().toString();
-		String imagePath = "/var/www/html/Images/Post/" + java.util.UUID.randomUUID().toString() + ".jpg";
-		String route = "http://3.22.230.92/Images/Post/"+ java.util.UUID.randomUUID().toString() + ".jpg";
+		String imagePath = "/var/www/html/Images/Post/" + imageName + ".jpg";
+		String route = "http://3.22.230.92/Images/Post/"+ imageName + ".jpg";
 
 		
 		this.decoder(imagenB64, imagePath);
