@@ -71,8 +71,6 @@ public class UserDAO implements IUserService {
 
 		Map.put("PUSER_NAME", user.getUserName());
 		Map.put("PUSER_NICKNAME", user.getUserNickname());
-		Map.put("PUSER_MAIL", user.getUserMail());
-		Map.put("PUSER_PASSWORD", user.getUserPassword());
 		Map.put("PUSER_BIRTHDATE", user.getUserBirthDate());
 		Map.put("PUSER_GENDER", user.getUserGender());
 		Map.put("PUSER_ID", user.getIdUser());
