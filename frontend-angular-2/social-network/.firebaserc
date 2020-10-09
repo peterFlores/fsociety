@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "hellome-f4901": {
+      "hosting": {
+        "pk2-angular": [
+          "hellome-f4901"
+        ]
+      }
+    }
+  }
+}

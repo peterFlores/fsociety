@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../../services/user.service';
+import { HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  test : Date = new Date();
-  focus;
-  focus1;
-  constructor() { }
+ 
+  constructor(private userService: UserService) { }
+
+  async onFacebookLogin(){
+    try{
+      this.userService.loginFacebook();
+    }
+    catch(error){console.log(error)}
+  }
 
   ngOnInit(): void {
   }
