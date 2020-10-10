@@ -7,6 +7,7 @@ import { from, Observable } from 'rxjs';
 import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { User } from 'firebase';
+import { SocialAuthService } from 'angularx-social-login';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,8 @@ export class UserService {
   public user: User;
 
   constructor(private _httpClient: HttpClient,
-              public afAuth: AngularFireAuth) { }
+              public afAuth: AngularFireAuth,
+              private authService: SocialAuthService) { }
 
   
   async loginFacebook(){
@@ -38,8 +40,8 @@ export class UserService {
 
   post(url, body) {
     var headers_object = new HttpHeaders();
-    headers_object.append('Content-Type', 'application/json');
-    headers_object.append("Authorization", "Basic " + btoa("username:password"));
+    headers_object.append('Content-Type', 'application/x-www-form-urlencoded');
+    headers_object.append("Authorization", "Basic " + btoa("socialapp:12345"));
 
     const httpOptions = {
       headers: headers_object

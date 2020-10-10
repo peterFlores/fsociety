@@ -20,6 +20,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'environments/environment';
 
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import { FacebookLoginProvider } from 'angularx-social-login';
+
 
 @NgModule({
   declarations: [
@@ -40,9 +43,23 @@ import { environment } from 'environments/environment';
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('365535794583694')
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

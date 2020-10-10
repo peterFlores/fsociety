@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { HttpParams } from '@angular/common/http';
 
+import { SocialAuthService, SocialUser } from "angularx-social-login";
+import { FacebookLoginProvider } from "angularx-social-login";
+import { stringify } from 'querystring';
+import { promise } from 'protractor';
+
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -12,13 +18,29 @@ export class RegisterComponent implements OnInit {
   userNickname: string;
   userPassword: string;
 
-  constructor(private userService: UserService) { }
+  user: SocialUser;
+  loggedIn: boolean;
 
-  async onFacebookLogin(){
-    try{
-      this.userService.loginFacebook();
-    }
-    catch(error){console.log(error)}
+  constructor(private userService: UserService,
+              private authService: SocialAuthService) { }
+
+  //async onFacebookLogin(){
+    //try{
+      //this.userService.loginFacebook();
+    //}
+    //catch(error){console.log(error)}
+  //}
+
+  ngOnInit() {
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      console.log(this.user);
+      this.loggedIn = (user != null);
+    });
+  }
+
+  signInWithFB() {
+    this.authService.signIn((FacebookLoginProvider.PROVIDER_ID))
   }
 
   createUser() {
@@ -36,5 +58,5 @@ export class RegisterComponent implements OnInit {
   }
 
 
-  ngOnInit() {} 
+  
 }
