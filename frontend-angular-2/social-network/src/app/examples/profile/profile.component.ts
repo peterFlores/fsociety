@@ -15,11 +15,11 @@ export class ProfileComponent implements OnInit {
     constructor(private _userService: UserService) { }
 
     ngOnInit() {
-        this._userService.getUserByID(2).subscribe(data => {
-            if (data.code == "1") {
-                this.user = data.data;
-            }
-        });
+        //this._userService.getUserByID(2).subscribe(data => {
+          //  if (data.code == "1") {
+            //    this.user = data.data;
+           // }
+      //  });
     }
 
 }
