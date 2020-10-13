@@ -20,7 +20,7 @@ public class PageVisitorController {
 	@Autowired
 	private IPageVisitorService service;
 	
-	@PostMapping(value = "/createVisitPage", consumes = { MediaType.APPLICATION_JSON_VALUE,
+	@PostMapping(value = "/CreateVisitPage", consumes = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
 	public Response AddUser(@RequestBody PageVisitor visitor,  HttpServletRequest request) throws Exception {
 

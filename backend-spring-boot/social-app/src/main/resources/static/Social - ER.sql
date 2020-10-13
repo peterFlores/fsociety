@@ -86,7 +86,7 @@ END$$
 
 DELIMITER ;
 
-CALL update_user('PAPS','PAN',STR_TO_DATE('24-05-2020', '%d-%M-%Y'),'MALE',1);
+CALL update_user('PAPS12378913','PAN789123','2020-06-31','MA',3);
 
 --DELETE
 
