@@ -30,7 +30,7 @@ public class User implements Serializable {
 
 	private String userImage;
 
-	@JsonFormat(pattern =  "MM/dd/yyyy")
+	@JsonFormat(pattern =  "YYYY/MM/DD")
 	private Date userBirthDate;
 
 	private String userGender;
