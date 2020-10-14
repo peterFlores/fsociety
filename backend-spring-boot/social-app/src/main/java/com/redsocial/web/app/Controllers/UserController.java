@@ -87,7 +87,7 @@ public class UserController {
 
 	}
 
-	@ResponseBody @PutMapping(value = "/updateUser/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE}, produces = "application/json")
+    @PutMapping(value = "/updateUser/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE}, produces = "application/json")
 	public Response updateUser(@PathVariable Long id, @RequestBody User user) throws Exception {
 
 		Response response = null;
@@ -112,10 +112,8 @@ public class UserController {
 		
 		return response;
 	}
-	
-	
-	@ResponseBody @PutMapping(value = "/updateUser/{id}", consumes = { 
-			MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
+
+    @PutMapping(value = "/updateUser/{id}", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
 	public Response updateUser2(@PathVariable Long id, User user) throws Exception {
 
 		Response response = null;
@@ -141,6 +139,7 @@ public class UserController {
 		return response;
 	}
 
+    
 	@DeleteMapping("/removeUser/{id}")
 	public Response RemoveUser(@PathVariable Integer id) {
 		service.deleteUser(id);
