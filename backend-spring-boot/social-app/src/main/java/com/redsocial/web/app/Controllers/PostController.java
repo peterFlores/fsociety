@@ -13,7 +13,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -46,37 +45,9 @@ public class PostController {
 		}
 	}
 
-		@PostMapping(value = "/Createpost", consumes = { MediaType.APPLICATION_JSON_VALUE}, produces = "application/json")
-	public Response createPost(@RequestBody PostJDBC post) throws Exception {
-
-		Response response = null;
-		String imageName = java.util.UUID.randomUUID().toString();
-		String imagenB64 = post.getImagePath().toString();
-		String imagePath = "/var/www/html/Images/Post/" + imageName + ".jpg";
-		String route = "http://3.22.230.92/Images/Post/"+ imageName + ".jpg";
-
-		
-		this.decoder(imagenB64, imagePath);
-		post.setImagePath(route);
-		
-		try {
-			jdbcPostService.createPost(post);
-			
-			
-			response = new Response("1", "SUCCESS", post);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			response = new Response("2", e.getMessage(), post);
-
-			e.printStackTrace();
-		}
-
-		return response;
-
-	}
 		
 		@PostMapping(value = "/Createpost", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
-		public Response createPost2(PostJDBC post) throws Exception {
+		public Response createPost(PostJDBC post) throws Exception {
 
 			Response response = null;
 			String imageName = java.util.UUID.randomUUID().toString();

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -48,28 +47,11 @@ public class UserController {
 		return service.listUsers();
 	}
 
-	@PostMapping(value = "/createUser", consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = "application/json")
-	public @ResponseBody Response AddUser(@RequestBody  User user) throws Exception {
 
-		Response response = null;
-		try {
-			service.createUser(user);
-
-			response = new Response("1", "SUCCESS", user);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			response = new Response("2", e.getMessage(), user);
-
-			e.printStackTrace();
-		}
-
-		return response;
-
-	}
 	
 	
 	@PostMapping(value = "/createUser", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
-	public @ResponseBody Response AddUser2(User user) throws Exception {
+	public @ResponseBody Response AddUser(User user) throws Exception {
 
 		Response response = null;
 		try {
@@ -87,34 +69,8 @@ public class UserController {
 
 	}
 
-    @PutMapping(value = "/updateUser/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE}, produces = "application/json")
-	public Response updateUser(@PathVariable Long id, @RequestBody User user) throws Exception {
-
-		Response response = null;
-
-		if (user.getIdUser().equals(id)) {
-			
-			try {
-				service.updateUser(user);
-
-				response = new Response("1", "SUCCESS", user);
-
-			} catch (Exception e) {
-				response = new Response("2", e.getMessage(), user);
-
-				e.printStackTrace();
-			}
-
-		} 
-		else {
-		response = new Response("2", "INCORRECT ID", user);
-		}
-		
-		return response;
-	}
-
     @PutMapping(value = "/updateUser/{id}", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
-	public Response updateUser2(@PathVariable Long id, User user) throws Exception {
+	public Response updateUser(@PathVariable Long id, User user) throws Exception {
 
 		Response response = null;
 

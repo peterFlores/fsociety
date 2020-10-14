@@ -1,9 +1,6 @@
 package com.redsocial.web.app.DAO;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.Base64;
+
 import java.util.HashMap;
 import java.util.Map;
 

@@ -45,4 +45,5 @@
 <fullyQualifiedTypeName name="com.redsocial.web.app.Services.IPageVisitorService"/>
 <fullyQualifiedTypeName name="com.redsocial.web.app.Models.PageVisitor"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
 </qualifiedTypeNameHistroy>

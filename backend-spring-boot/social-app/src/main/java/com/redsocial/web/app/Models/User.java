@@ -154,6 +154,4 @@ public class User implements Serializable {
 		this.userStatus = userStatus;
 	}
 
-	
-
 }
