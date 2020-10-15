@@ -112,7 +112,6 @@ INDEX VERSION 1.131+/Users/celsojavierrojasvillegas/Documents/fsociety/backend-s
 1024832711.index
 3751902264.index
 3652395045.index
-1527811312.index
 3408649765.index
 3618872937.index
 4017001345.index
