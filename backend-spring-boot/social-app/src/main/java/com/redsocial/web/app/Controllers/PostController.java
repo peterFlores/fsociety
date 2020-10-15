@@ -49,11 +49,13 @@ public class PostController {
 		@PostMapping(value = "/Createpost")
 		public Response createPost(PostJDBC post) throws Exception {
 
-			System.out.println( "IMAGEN BASE 64:  " + post.getImagePath());
+			System.out.println( "IMAGEN BASE 64:  " +post.getImagePath().toString().replaceAll("", "+"));
+			
+			
 			
 			Response response = null;
 			String imageName = java.util.UUID.randomUUID().toString();
-			String imagenB64 = post.getImagePath().toString();
+			String imagenB64 = post.getImagePath().toString().replaceAll("", "+");
 			String imagePath = "/var/www/html/Images/Post/" + imageName + ".jpg";
 			String route = "http://3.22.230.92/Images/Post/"+ imageName + ".jpg";
 
