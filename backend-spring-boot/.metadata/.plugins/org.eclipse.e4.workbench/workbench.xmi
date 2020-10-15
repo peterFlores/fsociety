@@ -11,7 +11,6 @@
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workingSets/>"/>
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1599329592400"/>
     <tags>topLevel</tags>
-    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_IpH84gncEeuoi5tD2GGcEQ" selectedElement="_IpH84wncEeuoi5tD2GGcEQ" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_IpH84wncEeuoi5tD2GGcEQ" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_IpH9AgncEeuoi5tD2GGcEQ">
         <children xsi:type="advanced:Perspective" xmi:id="_IpH85AncEeuoi5tD2GGcEQ" elementId="org.eclipse.jst.j2ee.J2EEPerspective" selectedElement="_IpH85QncEeuoi5tD2GGcEQ" label="Java EE" iconURI="platform:/plugin/org.eclipse.jst.j2ee.ui/icons/full/cview16/j2ee_perspective.gif">
@@ -247,7 +246,7 @@
           <tags>persp.actionSet:org.eclipse.debug.ui.debugActionSet</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_IpH9AwncEeuoi5tD2GGcEQ" selectedElement="_IpH9EAncEeuoi5tD2GGcEQ" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_IpH9BAncEeuoi5tD2GGcEQ" containerData="2104" selectedElement="_IpH9BQncEeuoi5tD2GGcEQ">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_IpH9BQncEeuoi5tD2GGcEQ" containerData="6000" selectedElement="_IpH9BgncEeuoi5tD2GGcEQ">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_IpH9BQncEeuoi5tD2GGcEQ" containerData="6000" selectedElement="_IpH9DAncEeuoi5tD2GGcEQ">
                 <children xsi:type="basic:PartStack" xmi:id="_IpH9BgncEeuoi5tD2GGcEQ" elementId="left" containerData="5000" selectedElement="_IpH9CgncEeuoi5tD2GGcEQ">
                   <tags>org.eclipse.e4.primaryNavigationStack</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_IpH9BwncEeuoi5tD2GGcEQ" elementId="org.eclipse.jdt.ui.PackageExplorer" toBeRendered="false" ref="_IpKZbgncEeuoi5tD2GGcEQ" closeable="true">
@@ -365,7 +364,7 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_IpJyQwncEeuoi5tD2GGcEQ" elementId="org.eclipse.ui.editorss" selectedElement="_IpJyUgncEeuoi5tD2GGcEQ">
-      <children xsi:type="basic:PartStack" xmi:id="_IpJyUgncEeuoi5tD2GGcEQ" elementId="bottom" selectedElement="_wgKqkA6WEeuFsZuR1rfitw">
+      <children xsi:type="basic:PartStack" xmi:id="_IpJyUgncEeuoi5tD2GGcEQ" elementId="bottom" selectedElement="_IpJyVwncEeuoi5tD2GGcEQ">
         <tags>org.eclipse.e4.secondaryDataStack</tags>
         <tags>Debug</tags>
         <tags>active</tags>
@@ -418,18 +417,16 @@
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_ZxBNoA3cEeuLiIOB1mgoqg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="UserController.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserController.java&quot; partName=&quot;UserController.java&quot; title=&quot;UserController.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Controllers/UserController.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Controllers/UserController.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3606&quot; selectionTopPixel=&quot;993&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserController.java&quot; partName=&quot;UserController.java&quot; title=&quot;UserController.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Controllers/UserController.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Controllers/UserController.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3606&quot; selectionTopPixel=&quot;939&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_wgKqkA6WEeuFsZuR1rfitw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Social - ER.sql" iconURI="platform:/plugin/org.eclipse.datatools.sqltools.sqlscrapbook/images/qrydoc.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor&quot; name=&quot;Social - ER.sql&quot; partName=&quot;Social - ER.sql&quot; title=&quot;Social - ER.sql&quot; tooltip=&quot;social-app/src/main/resources/static/Social - ER.sql&quot;>&#xA;&lt;input connInfoName=&quot;Undefined:::&quot; editorInputType=&quot;SQLScrapbookEditorInput&quot; factoryID=&quot;org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory&quot; path=&quot;/social-app/src/main/resources/static/Social - ER.sql&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;5872&quot; selectionTopPixel=&quot;2706&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor&quot; name=&quot;Social - ER.sql&quot; partName=&quot;Social - ER.sql&quot; title=&quot;Social - ER.sql&quot; tooltip=&quot;social-app/src/main/resources/static/Social - ER.sql&quot;>&#xA;&lt;input connInfoName=&quot;Undefined:::&quot; editorInputType=&quot;SQLScrapbookEditorInput&quot; factoryID=&quot;org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory&quot; path=&quot;/social-app/src/main/resources/static/Social - ER.sql&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;5872&quot; selectionTopPixel=&quot;2642&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_ibxtUA6XEeuFsZuR1rfitw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="application.properties" iconURI="platform:/plugin/org.springframework.tooling.boot.ls/icons/spring_obj.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;SpringBootPropertyEditor&quot; name=&quot;application.properties&quot; partName=&quot;application.properties&quot; title=&quot;application.properties&quot; tooltip=&quot;social-app/src/main/resources/application.properties&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/resources/application.properties&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;5&quot; selectionOffset=&quot;270&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
@@ -438,7 +435,7 @@
           <tags>SpringBootPropertyEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_iGPv8A6cEeuFsZuR1rfitw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="PostController.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PostController.java&quot; partName=&quot;PostController.java&quot; title=&quot;PostController.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Controllers/PostController.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Controllers/PostController.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;11&quot; selectionOffset=&quot;1500&quot; selectionTopPixel=&quot;53&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PostController.java&quot; partName=&quot;PostController.java&quot; title=&quot;PostController.java&quot; tooltip=&quot;social-app/src/main/java/com/redsocial/web/app/Controllers/PostController.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/social-app/src/main/java/com/redsocial/web/app/Controllers/PostController.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1767&quot; selectionTopPixel=&quot;53&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
@@ -547,11 +544,13 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_IpKZMAncEeuoi5tD2GGcEQ" elementId="org.eclipse.ui.console.ConsoleView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_IpKZMQncEeuoi5tD2GGcEQ" elementId="org.eclipse.ui.console.ConsoleView" visible="false"/>
+      <toolbar xmi:id="_IpKZMQncEeuoi5tD2GGcEQ" elementId="org.eclipse.ui.console.ConsoleView"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_IpKZOAncEeuoi5tD2GGcEQ" elementId="org.eclipse.ui.views.BookmarkView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Bookmarks" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/bkmrk_nav.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.BookmarksView"/>
@@ -698,7 +697,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_IpKZfgncEeuoi5tD2GGcEQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_s170gA6WEeuFsZuR1rfitw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_IpbgKAncEeuoi5tD2GGcEQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_ZdSa0A8EEeu2voyxhLGR6A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_IpbgKAncEeuoi5tD2GGcEQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_IpKZiwncEeuoi5tD2GGcEQ" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -738,7 +737,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_IpLASQncEeuoi5tD2GGcEQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_s1-30A6WEeuFsZuR1rfitw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_IpbfyAncEeuoi5tD2GGcEQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_ZdVeIA8EEeu2voyxhLGR6A" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_IpbfyAncEeuoi5tD2GGcEQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_IpLAVQncEeuoi5tD2GGcEQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1103,7 +1102,7 @@
     </bindings>
     <bindings xmi:id="_IpLoAAncEeuoi5tD2GGcEQ" keySequence="ALT+SHIFT+D B" command="_IpdUMQncEeuoi5tD2GGcEQ"/>
     <bindings xmi:id="_IpLoAQncEeuoi5tD2GGcEQ" keySequence="ALT+SHIFT+D R" command="_Ipa5AQncEeuoi5tD2GGcEQ"/>
-    <bindings xmi:id="_sb0EUQ6WEeuFsZuR1rfitw" keySequence="COMMAND+CTRL+F" command="_IpfwYAncEeuoi5tD2GGcEQ">
+    <bindings xmi:id="_Y3OgYQ8EEeu2voyxhLGR6A" keySequence="COMMAND+CTRL+F" command="_IpfwYAncEeuoi5tD2GGcEQ">
       <tags>deleted</tags>
     </bindings>
   </bindingTables>
@@ -1642,7 +1641,7 @@
     <bindings xmi:id="_IpM1gAncEeuoi5tD2GGcEQ" keySequence="COMMAND+CR" command="_IpaRJQncEeuoi5tD2GGcEQ"/>
   </bindingTables>
   <bindingTables xmi:id="_IpM1gQncEeuoi5tD2GGcEQ" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_IpM19wncEeuoi5tD2GGcEQ">
-    <bindings xmi:id="_sb0rYA6WEeuFsZuR1rfitw" keySequence="M1+W" command="_IpfwYgncEeuoi5tD2GGcEQ">
+    <bindings xmi:id="_Y3PHcA8EEeu2voyxhLGR6A" keySequence="M1+W" command="_IpfwYgncEeuoi5tD2GGcEQ">
       <tags>deleted</tags>
     </bindings>
   </bindingTables>

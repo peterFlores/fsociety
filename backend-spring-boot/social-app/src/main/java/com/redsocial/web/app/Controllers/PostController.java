@@ -49,6 +49,8 @@ public class PostController {
 		@PostMapping(value = "/Createpost", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
 		public Response createPost(PostJDBC post) throws Exception {
 
+			System.out.println( "IMAGEN BASE 64:  " + post.getImagePath());
+			
 			Response response = null;
 			String imageName = java.util.UUID.randomUUID().toString();
 			String imagenB64 = post.getImagePath().toString();
