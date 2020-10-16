@@ -20,7 +20,6 @@
 <fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.BeanPropertyRowMapper"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.support.RedirectAttributes"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.redsocial.web.app.Models.User"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
@@ -39,11 +38,18 @@
 <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="com.redsocial.web.app.Services.PostService"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
 <fullyQualifiedTypeName name="com.redsocial.web.app.Services.IPageVisitorService"/>
 <fullyQualifiedTypeName name="com.redsocial.web.app.Models.PageVisitor"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="com.redsocial.web.app.Services.IAnaliticsService"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.redsocial.web.app.Models.Analitics"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.annotation.JsonNaming"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonInclude"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonInclude.Include"/>
 </qualifiedTypeNameHistroy>
