@@ -41,7 +41,7 @@ export class UserService {
   post(url, body) {
     var headers_object = new HttpHeaders();
     headers_object.append('Content-Type', 'application/x-www-form-urlencoded');
-    headers_object.append("Authorization", "Basic " + btoa("socialapp:12345"));
+    headers_object.append("Authorization", `Basic ${btoa("socialapp:12345")}`);
 
     const httpOptions = {
       headers: headers_object

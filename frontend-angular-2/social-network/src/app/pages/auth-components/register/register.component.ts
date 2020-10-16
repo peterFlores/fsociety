@@ -24,12 +24,12 @@ export class RegisterComponent implements OnInit {
   constructor(private userService: UserService,
               private authService: SocialAuthService) { }
 
-  //async onFacebookLogin(){
-    //try{
-      //this.userService.loginFacebook();
-    //}
-    //catch(error){console.log(error)}
-  //}
+  async onFacebookLogin(){
+    try{
+      this.userService.loginFacebook();
+    }
+   catch(error){console.log(error)}
+  }
 
   ngOnInit() {
     this.authService.authState.subscribe((user) => {
@@ -39,9 +39,9 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  signInWithFB() {
-    this.authService.signIn((FacebookLoginProvider.PROVIDER_ID))
-  }
+  //signInWithFB() {
+    //this.authService.signIn((FacebookLoginProvider.PROVIDER_ID))
+  //}
 
   createUser() {
     const url = 'http://3.22.230.92:40000/createUser';

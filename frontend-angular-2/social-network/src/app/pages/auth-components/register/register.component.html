@@ -12,7 +12,7 @@
             <div class="social-line text-center">
               <a
                 class="btn btn-neutral btn-facebook btn-just-icon"
-                (click)="signInWithFB()"
+                (click)="onFacebookLogin()"
               >
                 <i class="fa fa-facebook-square"></i>
               </a>
@@ -72,7 +72,7 @@
                   </span>
                 </div>
                 <input
-                  type="text"
+                  type="password"
                   class="form-control"
                   placeholder="Password"
                   (focus)="focus1 = true"

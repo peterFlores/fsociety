@@ -1,0 +1,7 @@
+{
+    "/oauth/token/*": {
+      "target": "http://3.22.230.92:9100",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }
