@@ -13,9 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -24,7 +23,6 @@ import com.redsocial.web.app.Models.Response;
 import com.redsocial.web.app.Models.User;
 import com.redsocial.web.app.Models.UserJPA;
 import com.redsocial.web.app.Services.IUserService;
-
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -43,15 +41,17 @@ public class UserController {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new Response("-1", "ERROR"));
 		}
 	}
-	
+
 	@GetMapping("/listUser")
 	public List<User> listUsers() {
 		return service.listUsers();
 	}
 
-	@PostMapping(value = "/createUser", consumes = { MediaType.APPLICATION_JSON_VALUE,
-			MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
-	public Response AddUser(User user) throws Exception {
+
+	
+	
+	@PostMapping(value = "/createUser", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
+	public @ResponseBody Response AddUser(User user) throws Exception {
 
 		Response response = null;
 		try {
@@ -69,24 +69,33 @@ public class UserController {
 
 	}
 
-	@PutMapping(value = "/updateUser/{id}", consumes = { MediaType.APPLICATION_JSON_VALUE,
-			MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
-	public Response updateUser(@PathVariable Integer id, User user) throws Exception {
+    @PutMapping(value = "/updateUser/{id}", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE }, produces = "application/json")
+	public Response updateUser(@PathVariable Long id, User user) throws Exception {
 
 		Response response = null;
-		try {
-			service.updateUser(user);
 
-			response = new Response("1", "SUCCESS", user);
-		} catch (Exception e) {
-			response = new Response("2", e.getMessage(), user);
+		if (user.getIdUser().equals(id)) {
+			
+			try {
+				service.updateUser(user);
 
-			e.printStackTrace();
+				response = new Response("1", "SUCCESS", user);
+
+			} catch (Exception e) {
+				response = new Response("2", e.getMessage(), user);
+
+				e.printStackTrace();
+			}
+
+		} 
+		else {
+		response = new Response("2", "INCORRECT ID", user);
 		}
-
+		
 		return response;
 	}
 
+    
 	@DeleteMapping("/removeUser/{id}")
 	public Response RemoveUser(@PathVariable Integer id) {
 		service.deleteUser(id);
@@ -122,10 +131,11 @@ public class UserController {
 		List<User> userFound = service.findByUserMail(email);
 		System.out.println(userFound.get(0).getUserMail());
 		Response response = new Response("1", "SUCCESS", userFound);
-		
-		
+
 		return service.findByUserMail(email).get(0);
 	}
+	
+	
 
 	@PostMapping(value = "/upload/picture/{idUser}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 
@@ -139,11 +149,11 @@ public class UserController {
 		return (response);
 
 	}
-	
-	
-	
+
 	@GetMapping("/listTop5")
 	public List<User> listTop5() {
 		return service.listTop5();
 	}
+
+	
 }

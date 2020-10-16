@@ -30,7 +30,7 @@ public interface IUserService {
 	
 	
 	//Dont delete, implemented on oauth-service.
-		public List<User> findByUserMail(String email);
+	public List<User> findByUserMail(String email);
 	
 	// Profile picture upload for user id.
 	
