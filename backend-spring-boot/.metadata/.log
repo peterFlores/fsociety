@@ -11328,3 +11328,133 @@ Binding(COMMAND+SHIFT+T,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 12:32:24.268
 !MESSAGE executing callback sts4.classpath.AbfxmokK SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 13:08:13.072
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.AbfxmokK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 13:08:13.074
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.AbfxmokK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 13:08:13.075
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 13:08:13.075
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.AbfxmokK => OK
+
+!ENTRY org.eclipse.ui 2 2 2020-10-15 13:08:13.415
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2020-10-15 14:13:41.160 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_231
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_GT
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/celsojavierrojasvillegas/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/celsojavierrojasvillegas/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-10-15 14:13:55.923
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2020-10-15 14:13:58.393
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-10-15 14:13:58.393
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6dcf39c6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c0f32ad,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:47.082
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:47.085
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6e461fae[org.springframework.tooling.boot.ls:1.15.0.202003180840(id=1182)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:47.088
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:47.360
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.635
+!MESSAGE Boot LS startup time from start to initialized: 4491ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.914
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.puvtTCYeisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.914
+!MESSAGE Sorting projects...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.917
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.918
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.919
+!MESSAGE Sorting projects... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.919
+!MESSAGE inside synchronized Subscriptions
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.921
+!MESSAGE subscribing to classpath changes: sts4.classpath.puvtTCYe isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.926
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.931
+!MESSAGE subsribers = {sts4.classpath.puvtTCYe=Send Classpath Notifications(890)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.932
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.934
+!MESSAGE Preparing classpath changed notification social-app
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.935
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.938
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.938
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.puvtTCYe => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.962
+!MESSAGE classpath=129 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.967
+!MESSAGE buffering callback sts4.classpath.puvtTCYe social-app false 129
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:51.968
+!MESSAGE executing callback sts4.classpath.puvtTCYe 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 19:05:52.028
+!MESSAGE executing callback sts4.classpath.puvtTCYe SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2020-10-15 19:07:14.860
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 21:51:47.166
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.puvtTCYe
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 21:51:47.168
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.puvtTCYe
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 21:51:47.169
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-15 21:51:47.169
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.puvtTCYe => OK
