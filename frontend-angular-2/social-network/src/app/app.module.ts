@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 
@@ -14,6 +14,7 @@ import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/auth-components/login/login.component';
 import { RegisterComponent } from './pages/auth-components/register/register.component';
+//import { jwtDecode } from 'jwt-js-decode';
 
 //firebase
 import { AngularFireModule } from '@angular/fire';
@@ -23,10 +24,16 @@ import { environment } from 'environments/environment';
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import { FacebookLoginProvider } from 'angularx-social-login';
 
+import { LocalStorageService } from './services/local-storage.service';
+import { HttpConfigInterceptor } from '../app/interceptor/httpconfig.interceptor';
+import { ProtectedComponent } from './protected/protected.component';
+import { PublicComponent } from './public/public.component';
+
+
 
 @NgModule({
   declarations: [
-    SocialLayoutComponent, AuthLayoutComponent, AppComponent, LoginComponent, RegisterComponent
+    SocialLayoutComponent, AuthLayoutComponent, AppComponent, LoginComponent, RegisterComponent, HttpConfigInterceptor, ProtectedComponent, PublicComponent
   ],
 
   exports:[
@@ -44,9 +51,16 @@ import { FacebookLoginProvider } from 'angularx-social-login';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    SocialLoginModule
+    SocialLoginModule,
+    LocalStorageService
+  
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpConfigInterceptor,
+      multi: true
+    },
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {

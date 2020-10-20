@@ -6,6 +6,7 @@
 export const environment = {
   production: false,
   apiURL: 'http://3.22.230.92:40000',
+  backend: 'http://3.22.230.92:9100',
 
   firebaseConfig : {
     apiKey: "AIzaSyA2k1pZSfiS91Cv9hDK2g99fhheZ5B7_Co",

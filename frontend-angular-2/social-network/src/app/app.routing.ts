@@ -6,11 +6,14 @@ import { Routes, RouterModule } from '@angular/router';
 //import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { LoginComponent } from './pages/auth-components/login/login.component';
 import { RegisterComponent } from './pages/auth-components/register/register.component';
+import { ProtectedComponent } from '../app/protected/protected.component';
+import { AuthGuard } from './helpers/auth.guard';
 
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegisterComponent},
+  //{path: 'Protected', canActivate: [AuthGuard], component: ProtectedComponent }
 
   //{
     //path: "",

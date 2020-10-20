@@ -4,10 +4,23 @@ import { HttpParams } from '@angular/common/http';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'environments/environment';
-import { Observable} from 'rxjs'
+import { from, Observable} from 'rxjs'
 
 import { SocialAuthService, SocialUser } from "angularx-social-login";
 import { FacebookLoginProvider } from "angularx-social-login";
+
+import { LocalStorageService } from '../../../services/local-storage.service';
+
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { first } from 'rxjs-compat/operator/first';
+
+import { Route, Router } from '@angular/router';
+import { Validator } from '@angular/forms';
+import { auth } from 'firebase';
+
+import { jwtDecode } from 'jwt-js-decode';
+
+//import { jwt_decode } from '../../../../../node_modules/jwt-decode';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +28,10 @@ import { FacebookLoginProvider } from "angularx-social-login";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  private router$:Router;
+  private auth$: UserService;
+
+
   username: string;
   password: string;
   grant_type: string;  
@@ -24,7 +41,12 @@ export class LoginComponent implements OnInit {
  
   constructor(private userService: UserService,
               private _httpClient: HttpClient,
-              private authService: SocialAuthService) { }
+              private authService: SocialAuthService,
+              public localStorage: LocalStorageService,
+              protected auth: UserService) { 
+                this.auth$ = auth;
+
+              }
 
   async onFacebookLogin(){
     try{
@@ -33,9 +55,9 @@ export class LoginComponent implements OnInit {
     catch(error){console.log(error)}
   }
 
-  //signInWithFB() {
-    //this.authService.signIn((FacebookLoginProvider.PROVIDER_ID))
-  //}
+  signInWithFB() {
+  this.authService.signIn((FacebookLoginProvider.PROVIDER_ID))
+  }
 
 
   login(): Observable<any> {
@@ -60,11 +82,26 @@ export class LoginComponent implements OnInit {
       .set('password', this.password)
       .set('grant_type', 'password');
 
-    this.userService.post(url, body)
+   var token = this.userService.post(url, body)
       .subscribe(response => {
         console.log(response);
       });
+    
+      
+
+      this.auth$.login('username', 'password')
+        .subscribe(response => {
+          console.log(response);
+
+          if (response){
+            localStorage.setItem('token', response);
+
+            this.router$.navigate(['/Protected']);
+          }
+        });
+
   }
+
 
 
   ngOnInit(): void {

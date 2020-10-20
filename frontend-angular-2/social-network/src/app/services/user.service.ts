@@ -58,5 +58,8 @@ export class UserService {
     return this._httpClient.delete(url);
   }
 
+  login(username: string, password: string): Observable<string>{
+    return this._httpClient.get<string>(environment.backend + '/oauth/token' + '$username' + username + '$password' + password );
+  }
 
 }
