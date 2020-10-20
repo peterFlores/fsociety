@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
   async onFacebookLogin(){
     try{
       this.userService.loginFacebook();
+      console.log()
     }
     catch(error){console.log(error)}
   }
