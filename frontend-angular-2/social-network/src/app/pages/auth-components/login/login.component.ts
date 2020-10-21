@@ -62,7 +62,8 @@ export class LoginComponent implements OnInit {
 
     this.userService.post(url, body)
       .subscribe(response => {
-        console.log(response);
+        console.log(response)
+        localStorage.setItem('token', JSON.stringify(response))
       });
   }
 

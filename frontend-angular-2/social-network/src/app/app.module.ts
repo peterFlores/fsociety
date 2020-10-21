@@ -22,11 +22,14 @@ import { environment } from 'environments/environment';
 
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import { FacebookLoginProvider } from 'angularx-social-login';
+import { HomeComponent } from './pages/auth-components/home/home.component';
+import { CreatorsComponent } from './pages/auth-components/creators/creators.component';
+import { MetricsComponent } from './pages/auth-components/metrics/metrics.component';
 
 
 @NgModule({
   declarations: [
-    SocialLayoutComponent, AuthLayoutComponent, AppComponent, LoginComponent, RegisterComponent
+    SocialLayoutComponent, AuthLayoutComponent, AppComponent, LoginComponent, RegisterComponent, HomeComponent, CreatorsComponent, MetricsComponent
   ],
 
   exports:[
