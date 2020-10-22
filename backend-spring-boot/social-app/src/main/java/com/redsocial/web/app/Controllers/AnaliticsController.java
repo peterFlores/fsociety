@@ -18,7 +18,12 @@ public class AnaliticsController {
 	@Autowired
 	private IAnaliticsService service;
 	
-	@GetMapping("/MainPageRegistred")
+	@GetMapping("/RegistredByDay")
+	public List<Analitics> todayRegistred() {
+		return service.mainPageVisits();
+	}
+	
+	@GetMapping("/VisitByDay")
 	public List<Analitics> mainPageVisits() {
 		return service.mainPageVisits();
 	}

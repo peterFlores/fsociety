@@ -32,11 +32,13 @@ public class AnaliticsDAO implements IAnaliticsService {
 			@Override
 			public Analitics mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Analitics analitics = new Analitics();
-				analitics.setTitleAnalitic("TOTAL DE VISITAS Y REGISTRADOS");		
-				analitics.setDateAnalitics(rs.getDate("FECHA"));
-				analitics.setVisitsDay(rs.getLong("VISITAS_DIARIAS"));
-				analitics.setRegistredDay(rs.getLong("USUARIOS_CREADOS"));
+		
 
+				rs.getLong("USUARIOS_CREADOS");
+				
+				analitics.setName(rs.getString("FECHA"));
+				analitics.setValue(rs.getString("VISITAS_DIARIAS"));
+				
 				return analitics;
 			}
 		
@@ -44,6 +46,33 @@ public class AnaliticsDAO implements IAnaliticsService {
 		
 		return analiticsData;
 	}
+	
+	@Override
+	public List<Analitics> registred() {
+		
+		String sql = "SELECT * FROM V_VIEWS_PER_DAY";
+		
+		
+		List<Analitics> analiticsData = jdbcTemplate.query(sql, new RowMapper<Analitics>() {
+
+			@Override
+			public Analitics mapRow(ResultSet rs, int rowNum) throws SQLException {
+				Analitics analitics = new Analitics();
+		
+
+				rs.getLong("USUARIOS_CREADOS");
+				
+				analitics.setName(rs.getString("FECHA"));
+				analitics.setValue(rs.getString("USUARIOS_CREADOS"));
+				
+				return analitics;
+			}
+		
+		});
+		
+		return analiticsData;
+	}
+	
 	
 	
 	@Transactional(readOnly = true)
@@ -58,11 +87,11 @@ public class AnaliticsDAO implements IAnaliticsService {
 			@Override
 			public Analitics mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Analitics analitics = new Analitics();
-				analitics.setTitleAnalitic("TOP 5 USUARIOS CON MAS PUBLICACIONES.");		
-				analitics.setIdUser(rs.getLong("USER_ID"));
-				analitics.setUserNickname(rs.getString("USER_NICKNAME"));
-				analitics.setNumberPosts(rs.getLong("POSTS_COUNT"));
+				rs.getLong("USER_ID");
+				analitics.setName(rs.getString("USER_NICKNAME"));
+				analitics.setValue(rs.getString("POSTS_COUNT"));
 				return analitics;
+
 			}
 		
 		});
@@ -82,10 +111,8 @@ public class AnaliticsDAO implements IAnaliticsService {
 			@Override
 			public Analitics mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Analitics analitics = new Analitics();
-				
-				analitics.setTitleAnalitic("GENEROS DE USUARIOS REGISTRADOS.");				
-				analitics.setGenderAnalitic(rs.getString("GENDER"));
-				analitics.setNumberGender(rs.getLong("USERS_COUNT"));
+				analitics.setName(rs.getString("GENDER"));
+				analitics.setValue(rs.getString("USERS_COUNT"));
 				return analitics;
 			}
 		
@@ -105,9 +132,9 @@ public class AnaliticsDAO implements IAnaliticsService {
 			@Override
 			public Analitics mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Analitics analitics = new Analitics();
-				analitics.setTitleAnalitic("TOP 5 VISITADOS EN LA SEMANA");				
-				analitics.setUserName(rs.getString("USER_NAME"));
-				analitics.setTotalVisits(rs.getLong("USER_COUNT"));
+				analitics.setName(rs.getString("USER_NAME"));
+				analitics.setValue(rs.getString("USER_COUNT"));
+				
 				return analitics;
 			}
 		
