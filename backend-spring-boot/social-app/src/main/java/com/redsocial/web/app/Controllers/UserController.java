@@ -24,6 +24,8 @@ import com.redsocial.web.app.Models.User;
 import com.redsocial.web.app.Models.UserJPA;
 import com.redsocial.web.app.Services.IUserService;
 
+import io.micrometer.core.instrument.util.StringUtils;
+
 @RestController
 @CrossOrigin(origins = "*")
 public class UserController {
@@ -54,6 +56,7 @@ public class UserController {
 	public @ResponseBody Response AddUser(User user) throws Exception {
 
 		Response response = null;
+		
 		try {
 			service.createUser(user);
 
@@ -142,9 +145,20 @@ public class UserController {
 	public Response UpdatePicture(@PathVariable("idUser") Long idUser, @RequestParam("picture") MultipartFile picture,
 			RedirectAttributes redirectAttributes) throws IllegalStateException, IOException {
 
-		service.updatePicture(picture, idUser);
+		Response response = null;
+		
+		
 
-		Response response = new Response("1", "SUCCESS");
+		try {
+			service.updatePicture(picture, idUser);
+			 response = new Response("1", "SUCCESS");
+
+		} catch (Exception e) {
+			response = new Response("2","FAIL INVALID FILE", picture);
+
+		}
+
+		
 
 		return (response);
 

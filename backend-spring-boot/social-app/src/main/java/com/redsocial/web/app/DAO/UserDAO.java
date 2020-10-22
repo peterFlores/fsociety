@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.persistence.EntityNotFoundException;
 
@@ -20,9 +22,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+
 import com.redsocial.web.app.Models.User;
 import com.redsocial.web.app.Models.UserJPA;
 import com.redsocial.web.app.Services.IUserService;
+
+import io.micrometer.core.instrument.util.StringUtils;
 
 @Service
 public class UserDAO implements IUserService {
@@ -56,7 +61,27 @@ public class UserDAO implements IUserService {
 		if (jdbcTemplate.queryForObject(sqlNickname, new Object[] { user.getUserNickname() }, Integer.class) > 0) {
 			throw new RuntimeException("NICKNAME ALREADY EXISTS");
 		}
+		
+		if (StringUtils.isBlank(user.getUserNickname())) {
+			throw new Exception("NICKNAME IS A REQUIRED");
+		}
+		
+		if (StringUtils.isBlank(user.getUserMail())) {
+			throw new Exception("MAIL IS A REQUIRED");
+		}
 
+		if (StringUtils.isBlank(user.getUserPassword())) {
+			throw new Exception("PASSWORD IS A REQUIRED");
+		}
+		
+	
+		final Pattern VALID_EMAIL = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+	    Matcher matcher = VALID_EMAIL.matcher(user.getUserMail());
+	    
+	    if(matcher.find() == false) {
+	    	throw new Exception("MAIL INVALID");
+	    }
 		SqlParameterSource src = new MapSqlParameterSource().addValues(Map);
 
 		jdbcCall.execute(src);
@@ -76,16 +101,21 @@ public class UserDAO implements IUserService {
 		Map.put("PUSER_ID", user.getIdUser());
 
 		// VALIDATE IF EMAIL OR NICKNAME EXISTS
-		String sqlEmail = "SELECT count(*) FROM USERS WHERE USER_MAIL = ? ";
 		String sqlNickname = "SELECT count(*) FROM USERS WHERE USER_NICKNAME = ? ";
 
-		if (jdbcTemplate.queryForObject(sqlEmail, new Object[] { user.getUserMail() }, Integer.class) > 0) {
-			throw new RuntimeException("EMAIL ALREADY EXISTS");
-		}
 
 		if (jdbcTemplate.queryForObject(sqlNickname, new Object[] { user.getUserNickname() }, Integer.class) > 0) {
 			throw new RuntimeException("NICKNAME ALREADY EXISTS");
 		}
+		
+		if (StringUtils.isBlank(user.getUserName())) {
+			throw new Exception("NAME IS A REQUIRED");
+		}
+		
+		if (StringUtils.isBlank(user.getUserNickname())) {
+			throw new Exception("NICKNAME IS A REQUIRED");
+		}
+		
 
 		SqlParameterSource src = new MapSqlParameterSource().addValues(Map);
 
@@ -113,7 +143,7 @@ public class UserDAO implements IUserService {
 			@Override
 			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
 				User user = new User();
-
+					
 				user.setUserImage(rs.getString("USER_IMAGE_PATH"));
 				user.setIdUser(rs.getLong("USER_ID"));
 				user.setUserName(rs.getString("USER_NAME"));

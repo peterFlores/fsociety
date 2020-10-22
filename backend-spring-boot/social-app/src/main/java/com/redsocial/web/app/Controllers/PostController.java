@@ -80,7 +80,7 @@ public class PostController {
 		}
 	
 	@org.springframework.web.bind.annotation.DeleteMapping("/removePost/{id}")
-	public Response RemoveUser(@org.springframework.web.bind.annotation.PathVariable Integer id) {
+	public Response removePost(@org.springframework.web.bind.annotation.PathVariable Integer id) {
 		jdbcPostService.deletePost(id);
 		Response response = new Response("1", "SUCCESS");
 		return response;
