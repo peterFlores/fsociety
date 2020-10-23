@@ -9,6 +9,9 @@ import { Observable} from 'rxjs'
 import { SocialAuthService, SocialUser } from "angularx-social-login";
 import { FacebookLoginProvider } from "angularx-social-login";
 
+import * as jwt_decode from 'jwt-decode';
+import { AuthService } from 'app/services/auth.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -21,8 +24,10 @@ export class LoginComponent implements OnInit {
 
   user: SocialUser;
   loggedIn: boolean;
+
+  
  
-  constructor(private userService: UserService,
+  constructor(private userService: AuthService,
               private _httpClient: HttpClient,
               private authService: SocialAuthService) { }
 
@@ -37,20 +42,6 @@ export class LoginComponent implements OnInit {
     //this.authService.signIn((FacebookLoginProvider.PROVIDER_ID))
   //}
 
-
-  login(): Observable<any> {
-    debugger
-    const body = new HttpParams()
-      .set('username', 'peter@gmail.com')
-      .set('password', '12345')
-      .set('grant_type', 'password');
-    return this._httpClient.post<any>(`${environment.apiURL}/oauth/token`, body.toString(), {
-      headers: new HttpHeaders()
-        .set('Content-Type', 'application/x-www-form-urlencoded')
-        .set("Authorization", `Basic ${btoa("socialapp:12345")}`)
-    });
-  }
-
   loginUser() {
 
     const url = '/oauth/token';
@@ -63,10 +54,24 @@ export class LoginComponent implements OnInit {
     this.userService.post(url, body)
       .subscribe(response => {
         console.log(response)
-        localStorage.setItem('token', JSON.stringify(response))
+        localStorage.setItem('token', JSON.stringify(response)) 
       });
   }
+decodificar(){
+  var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJQRVRFUkBHTUFJTC5DT00iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwibmlja25hbWUiOiJURVNUMDAxIiwiY3JlYXRlZF9hdCI6MTYwMjI4ODAwMDAwMCwicHJvZmlsZV9waWN0dXJlIjoiaHR0cDovLzMuMjIuMjMwLjkyL0ltYWdlcy9Qcm9maWxlL2RzZHNkLmpwZyIsImV4cCI6MTYwMzQxNTg1NCwiYXV0aG9yaXRpZXMiOlsiU09DSUFMIl0sImp0aSI6ImYyYjkwNWRhLTU1OWYtNDE4NC1hZjFjLWJiM2ViMjNkODI5YyIsImNsaWVudF9pZCI6InNvY2lhbGFwcCJ9.CRHSdrFglhFfWyNZM05_jcyBdsj_7y7-nb_1IF6pJ68";
+  var decoded = jwt_decode(token);
 
+console.log(decoded);
+}
+
+  decodetoken(){
+    var token = localStorage.getItem('token');
+
+   var decoded = jwt_decode(token)
+
+    console.log(decoded)
+  }
+  
 
   ngOnInit(): void {
   }

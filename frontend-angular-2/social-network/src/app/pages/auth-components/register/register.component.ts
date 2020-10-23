@@ -6,6 +6,8 @@ import { SocialAuthService, SocialUser } from "angularx-social-login";
 import { FacebookLoginProvider } from "angularx-social-login";
 import { stringify } from 'querystring';
 import { promise } from 'protractor';
+import { AuthService } from 'app/services/auth.service';
+import { subscribeOn } from 'rxjs-compat/operator/subscribeOn';
 
 
 @Component({
@@ -21,7 +23,7 @@ export class RegisterComponent implements OnInit {
   user: SocialUser;
   loggedIn: boolean;
 
-  constructor(private userService: UserService,
+  constructor(private userService: AuthService,
               private authService: SocialAuthService) { }
 
   async onFacebookLogin(){
@@ -31,6 +33,12 @@ export class RegisterComponent implements OnInit {
    catch(error){console.log(error)}
   }
 
+  signInWithFB(): void {
+    this.authService.signIn((FacebookLoginProvider.PROVIDER_ID))
+    console.log()
+  }
+
+
   ngOnInit() {
     this.authService.authState.subscribe((user) => {
       this.user = user;
@@ -38,10 +46,6 @@ export class RegisterComponent implements OnInit {
       this.loggedIn = (user != null);
     });
   }
-
-  //signInWithFB() {
-    //this.authService.signIn((FacebookLoginProvider.PROVIDER_ID))
-  //}
 
   createUser() {
     const url = 'http://3.22.230.92:40000/createUser';

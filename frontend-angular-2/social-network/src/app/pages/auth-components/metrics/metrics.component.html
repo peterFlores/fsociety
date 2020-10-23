@@ -1,1 +1,39 @@
-<p>metrics works!</p>
+<div class="page-header" data-parallax="true" style="background-image: url('./assets/img/login-image.jpg')">
+    <div class="filter"></div>
+    <div class="container">
+        <div class="motto text-center">
+          
+            <div id="divChart">
+                <canvas id="myChart"></canvas>
+
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer register-footer text-center  ">
+        
+            <br />
+            <button type="button" class="btn btn-outline-neutral btn-round " [routerLink]="['/login']" >TOP 5 DE LA SEMANA</button>
+            <br>
+            <br>
+            <br>
+            <button type="button" class="btn btn-outline-neutral btn-round" [routerLink]="['/registro']" >VISITAS EN LA PAGINA</button>
+            <br>
+            <br>
+            <br>
+            <button type="button" class="btn btn-outline-neutral btn-round" (click)="top5Week()" >TOP 5 - POST</button>
+            <br>
+            <br>
+            <br>
+            <button type="button" class="btn btn-outline-neutral btn-round" [routerLink]="['/metricas']">REGISTRO: HOMBRES VRS. MUJERES</button>
+
+    </div>
+
+</div>
+
+<div class="footer register-footer text-center">
+    <h6>&copy;{{ test | date: "yyyy" }}, by Ingenieria en Sistemas UMG</h6>
+  </div>
+
+

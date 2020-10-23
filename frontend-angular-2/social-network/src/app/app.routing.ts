@@ -7,14 +7,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './pages/auth-components/login/login.component';
 import { RegisterComponent } from './pages/auth-components/register/register.component';
 import { HomeComponent } from './pages/auth-components/home/home.component';
-import { CreatorsComponent } from './pages/auth-components/creators/creators.component'
-
+import { CreatorsComponent } from './pages/auth-components/creators/creators.component';
+import { MetricsComponent } from './pages/auth-components/metrics/metrics.component'
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'creadores', component: CreatorsComponent},
+  {path: 'metricas', component: MetricsComponent},
 
   //{
     //path: "",
