@@ -8,8 +8,9 @@ import { auth } from "firebase/app";
 import { AngularFireAuth } from "@angular/fire/auth";
 import { User } from "firebase";
 import { SocialAuthService } from "angularx-social-login";
+import { Router } from '@angular/router';
 
-import * as jwt_decode from "jwt-decode";
+import * as jwt_decode from 'jwt-decode';
 
 @Injectable({
   providedIn: "root",
@@ -17,23 +18,30 @@ import * as jwt_decode from "jwt-decode";
 export class AuthService {
   public user: User;
 
-  public getToken(): string {
-    return localStorage.getItem("token");
-  }
+  TOKEN_KEY='token'
 
-  public decodePayloadJWT(): any {
-    try {
-      return jwt_decode(this.getToken());
-    } catch (Error) {
-      return null;
-    }
-  }
+
 
   constructor(
     private _httpClient: HttpClient,
     public afAuth: AngularFireAuth,
-    private authService: SocialAuthService
+    private authService: SocialAuthService,
+    private router: Router
   ) {}
+
+  get token(){
+    return localStorage.getItem(this.TOKEN_KEY);
+  }
+
+  get isAutenticated(){
+    return !!localStorage.getItem(this.TOKEN_KEY);
+  }
+
+  logout(){
+    localStorage.removeItem(this.TOKEN_KEY);
+    this.router.navigateByUrl('/home');
+  }
+
 
   async loginFacebook() {
     try {
