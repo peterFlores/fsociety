@@ -9,7 +9,6 @@ import { from, observable, Observable} from 'rxjs'
 import { SocialAuthService, SocialUser } from "angularx-social-login";
 import { FacebookLoginProvider } from "angularx-social-login";
 
-import * as jwt_decode from 'jwt-decode';
 import { AuthService } from 'app/services/auth.service';
 import * as JwtDecode from 'jwt-decode';
 import { userInfo } from 'os';
@@ -21,6 +20,10 @@ import { jsonpFactory } from '@angular/http/src/http_module';
 
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import * as JWT from 'jwt-decode';
+
+// @ts-ignore  
+import jwt_decode from "jwt-decode";
 
 
 
@@ -38,35 +41,25 @@ export class LoginComponent implements OnInit {
   user: SocialUser;
   loggedIn: boolean;
 
-  TOKEN_KEY='token';
-
-  //helper = new JwtHelperService();
  
   constructor(private userService: AuthService,
               private _httpClient: HttpClient,
               private authService: SocialAuthService,
               private router: Router) { }
 
-  async onFacebookLogin(){
-    try{
-      this.userService.loginFacebook();
+
+
+  signInWithFB(): void {
+    try {
+      var data = this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+
+      console.log(data)
+    } catch (e) {
+      console.log(e);
     }
-    catch(error){console.log(error)}
   }
 
-  //signInWithFB() {
-    //this.authService.signIn((FacebookLoginProvider.PROVIDER_ID))
-  //}
-
-
-
   loginUser() {
-    
-    //const helper = new JwtHelperService();
-
-    //const decodedToken = helper.decodeToken(this.TOKEN_KEY);
-    
-    
     const url = '/oauth/token';
     const body = new HttpParams()
       .set('username', this.username)
@@ -75,36 +68,27 @@ export class LoginComponent implements OnInit {
 
     this.userService.post(url, body)
       .subscribe(response => {
-        console.log((response))
-        //JSON.parse(atob(this.TOKEN_KEY.split('.')[1]))
-        localStorage.setItem('token', JSON.stringify(response))
-        //this.router.navigateByUrl('/profile');
-           });
+        const token = localStorage.setItem('token', JSON.stringify(response)) 
+        });
+  }
+
+  getDecodedAccessToken(){
+    var token = localStorage.getItem('token');
+    var decoded = jwt_decode(token); 
+    console.log(decoded.id);   
   }
 
   logout(){
-    localStorage.removeItem(this.TOKEN_KEY);
+    localStorage.removeItem('token');
     this.router.navigateByUrl('/home');
   }
 
 
-
-decodificar(){
-  var token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJQRVRFUkBHTUFJTC5DT00iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwibmlja25hbWUiOiJURVNUMDAxIiwiY3JlYXRlZF9hdCI6MTYwMjI4ODAwMDAwMCwicHJvZmlsZV9waWN0dXJlIjoiaHR0cDovLzMuMjIuMjMwLjkyL0ltYWdlcy9Qcm9maWxlL2RzZHNkLmpwZyIsImV4cCI6MTYwMzQxNTg1NCwiYXV0aG9yaXRpZXMiOlsiU09DSUFMIl0sImp0aSI6ImYyYjkwNWRhLTU1OWYtNDE4NC1hZjFjLWJiM2ViMjNkODI5YyIsImNsaWVudF9pZCI6InNvY2lhbGFwcCJ9.CRHSdrFglhFfWyNZM05_jcyBdsj_7y7-nb_1IF6pJ68';
-  var decoded = jwt_decode(token);
-console.log(decoded);
-}
-
-  decodetoken(){
-    var token = localStorage.getItem('token');
-
-   var decoded = jwt_decode(token)
-
-    console.log(decoded)
+  ngOnInit() {
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      console.log(this.user);
+      this.loggedIn = (user != null);
+    });
   }
-  
-
-  ngOnInit(): void {
-  }
-
 }

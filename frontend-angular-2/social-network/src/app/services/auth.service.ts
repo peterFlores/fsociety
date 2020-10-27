@@ -9,8 +9,11 @@ import { AngularFireAuth } from "@angular/fire/auth";
 import { User } from "firebase";
 import { SocialAuthService } from "angularx-social-login";
 import { Router } from '@angular/router';
+// @ts-ignore  
+import jwt_decode from "jwt-decode";
 
-import * as jwt_decode from 'jwt-decode';
+
+
 
 @Injectable({
   providedIn: "root",
@@ -18,9 +21,8 @@ import * as jwt_decode from 'jwt-decode';
 export class AuthService {
   public user: User;
 
+
   TOKEN_KEY='token'
-
-
 
   constructor(
     private _httpClient: HttpClient,
@@ -29,34 +31,19 @@ export class AuthService {
     private router: Router
   ) {}
 
-  get token(){
-    return localStorage.getItem(this.TOKEN_KEY);
-  }
-
-  get isAutenticated(){
-    return !!localStorage.getItem(this.TOKEN_KEY);
-  }
 
   logout(){
-    localStorage.removeItem(this.TOKEN_KEY);
+    localStorage.removeItem('token');
     this.router.navigateByUrl('/home');
   }
 
-
-  async loginFacebook() {
-    try {
-      return this.afAuth.signInWithPopup(new auth.FacebookAuthProvider());
-    } catch (error) {
-      console.log(error);
-    }
+  //Decoder
+  getDecodedAccessToken(){
+    var token = localStorage.getItem('token');
+    var decoded = jwt_decode(token); 
+    console.log(decoded.id);   
   }
 
-  getUserByID(id: number): Observable<User> {
-    id = 2;
-    return this._httpClient.get<User>(
-      `${environment.apiURL}/search_user/${id}`
-    );
-  }
 
   get(url) {
     return this._httpClient.get(url);

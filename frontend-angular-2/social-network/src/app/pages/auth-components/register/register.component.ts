@@ -26,16 +26,14 @@ export class RegisterComponent implements OnInit {
   constructor(private userService: AuthService,
               private authService: SocialAuthService) { }
 
-  async onFacebookLogin(){
-    try{
-      this.userService.loginFacebook();
-    }
-   catch(error){console.log(error)}
-  }
 
   signInWithFB(): void {
-    this.authService.signIn((FacebookLoginProvider.PROVIDER_ID))
-    console.log()
+    try {
+      var data = this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+      console.log(data)
+    } catch (e) {
+      console.log(e);
+    }
   }
 
 
@@ -58,6 +56,7 @@ export class RegisterComponent implements OnInit {
     this.userService.post(url, body)
       .subscribe(response => {
         console.log(response);
+        localStorage.setItem('user', JSON.stringify(response))
       });
   }
 
