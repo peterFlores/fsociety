@@ -72,11 +72,12 @@ export class LoginComponent implements OnInit {
         });
   }
 
-  getDecodedAccessToken(){
-    var token = localStorage.getItem('token');
-    var decoded = jwt_decode(token); 
-    console.log(decoded.id);   
-  }
+  //getDecodedAccessToken(){
+    //var token = localStorage.getItem('token');
+    //var decoded = jwt_decode(token); 
+    //var idUser = decoded.id;
+    //console.log(idUser); 
+  //}
 
   logout(){
     localStorage.removeItem('token');

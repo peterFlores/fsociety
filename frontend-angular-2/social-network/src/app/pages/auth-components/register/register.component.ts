@@ -29,7 +29,22 @@ export class RegisterComponent implements OnInit {
 
   signInWithFB(): void {
     try {
+      const url = 'http://3.22.230.92:40000/createUser';
+      
+
       var data = this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+      var datos = console.log(data) 
+      const body = new HttpParams()
+       .set('userMail', this.userMail)
+       .set('userNickname', this.userNickname)
+       .set('userPassword', this.userPassword);
+
+    this.userService.post(url, body)
+      .subscribe(response => {
+        console.log(response);
+        localStorage.setItem('user', JSON.stringify(response))
+      });
+
       console.log(data)
     } catch (e) {
       console.log(e);

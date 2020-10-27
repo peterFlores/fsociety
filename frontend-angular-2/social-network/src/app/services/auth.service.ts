@@ -13,8 +13,6 @@ import { Router } from '@angular/router';
 import jwt_decode from "jwt-decode";
 
 
-
-
 @Injectable({
   providedIn: "root",
 })
@@ -41,9 +39,11 @@ export class AuthService {
   getDecodedAccessToken(){
     var token = localStorage.getItem('token');
     var decoded = jwt_decode(token); 
-    console.log(decoded.id);   
+    var idUser = decoded.id;
+    console.log(idUser);   
   }
 
+  
 
   get(url) {
     return this._httpClient.get(url);
