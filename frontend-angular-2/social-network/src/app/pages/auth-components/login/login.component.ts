@@ -52,12 +52,14 @@ export class LoginComponent implements OnInit {
   signInWithFB(): void {
     try {
       var data = this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
-
-      console.log(data)
+     localStorage.setItem('usuario', JSON.stringify(console.log(data)))
+     this.router.navigateByUrl('/home');
     } catch (e) {
       console.log(e);
     }
   }
+
+
 
   loginUser() {
     const url = '/oauth/token';
@@ -91,5 +93,7 @@ export class LoginComponent implements OnInit {
       console.log(this.user);
       this.loggedIn = (user != null);
     });
+
+
   }
 }
