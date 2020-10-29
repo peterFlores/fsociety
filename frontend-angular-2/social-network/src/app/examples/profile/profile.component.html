@@ -6,128 +6,281 @@
   >
     <div class="filter"></div>
   </div>
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title text-center">UPDATE MY INFO</h5>
+      <button
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="modal.dismiss('Cross click')"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <div class="modal-body">
+        <div class="form-group">
+          <input
+            type="text"
+            formControlName="name"
+            placeholder="name"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            formControlName="nickname"
+            placeholder="nickname"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="date"
+            formControlName="birthdate"
+            placeholder="birth"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <select class="form-control" formControlName="gender" required>
+            <option value="" disabled>Seleccionar</option>
+            <option *ngFor="let b of gender" value="{{ b.value }}">
+              {{ b.label }}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="left-side">
+          <button
+            type="button"
+            class="btn btn-default btn-link"
+            (click)="modal.close('Close click')"
+          >
+            CANCEL
+          </button>
+        </div>
+        <div class="divider"></div>
+        <div class="right-side">
+          <button type="submit" class="btn btn-danger btn-link">UPDATE</button>
+        </div>
+      </div>
+    </form>
+  </ng-template>
+
+  <ng-template #picture let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title text-center">UPDATE MY PICTURE</h5>
+      <button
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="modal.dismiss('Cross click')"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <input
+        type="file"
+        class="form-control"
+        (change)="onSelect($event.target.files)"
+        accept="image/jpeg"
+      />
+    </div>
+    <div class="modal-footer">
+      <div class="left-side">
+        <button
+          type="button"
+          class="btn btn-default btn-link"
+          (click)="modal.close('Close click')"
+        >
+          CANCEL
+        </button>
+      </div>
+      <div class="divider"></div>
+      <div class="right-side">
+        <button
+          type="button"
+          class="btn btn-danger btn-link"
+          (click)="upload()"
+        >
+          UPDATE
+        </button>
+      </div>
+    </div>
+  </ng-template>
 
   <div class="section profile-content">
     <div class="container">
-        <div class="main-body">
-          <div class="row gutters-sm">
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex flex-column align-items-center text-center">
-                    <img
-                      src="{{ user.userImage }}"
-                      alt="Admin"
-                      class="rounded-circle"
-                      width="150"
-                    />
-                    <div class="mt-2">
-                      <h4>{{ user.userNickname }}</h4>
-                      <p class="text-secondary mb-1">{{ user.userStatus }}</p>
-                      <button class="btn btn-primary">UPDATE MY INFO</button>
-                      <button class="btn btn-outline-primary">MESSAGE</button>
+      <div class="main-body">
+        <div class="row gutters-sm">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center">
+                  <img
+                    src="{{ user?.userImage }}"
+                    alt="Admin"
+                    class="rounded-circle"
+                    width="150"
+                    (click)="openUpload(picture)"
+                  />
+                  <div class="mt-2">
+                    <h4>{{ user?.userNickname }}</h4>
+                    <span class="label label-success mb-2">{{
+                      user?.userStatus
+                    }}</span>
+                    <div class="row">
+                      <button
+                        *ngIf="id === 0"
+                        class="btn btn-warning"
+                        (click)="openLg(content)"
+                      >
+                        UPDATE MY INFO
+                      </button>
+                      <button class="btn btn-outline-warning">MESSAGE</button>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="card mt-3">
-                  <div class="card-header">PROFILE INFO</div>
-                <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="mb-0">Full Name</h6>
-                      </div>
-                      <div class="text-secondary">
-                        {{ user.userName }}
-                      </div>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="mb-0">Email</h6>
-                      </div>
-                      <div class="text-secondary">
-                        {{ user.userMail }}
-                      </div>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="mb-0">Gender</h6>
-                      </div>
-                      <div class="text-secondary">
-                        {{ user.userGender }}
-                      </div>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="mb-0">Birthdate</h6>
-                      </div>
-                      <div class="text-secondary">
-                        {{ user.userBirthDate }}
-                      </div>
-                    </div>
-                  </div>
               </div>
             </div>
-            <div class="col-md-8">
-              <div class="card">
-                <div class="card-header">POSTS</div>
-                <div class="card-body">
+
+            <div class="card mt-3">
+              <div class="card-header">PROFILE INFO</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <h6 class="mb-0">Full Name</h6>
+                  </div>
+                  <div class="text-secondary">
+                    {{ user?.userName }}
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-4">
+                    <h6 class="mb-0">Email</h6>
+                  </div>
+                  <div class="text-secondary">
+                    {{ user?.userMail }}
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-4">
+                    <h6 class="mb-0">Gender</h6>
+                  </div>
+                  <div class="text-secondary">
+                    {{ user?.userGender }}
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-4">
+                    <h6 class="mb-0">Birthdate</h6>
+                  </div>
+                  <div class="text-secondary">
+                    {{ user?.userBirthDate }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="card" *ngIf="id === 0">
+              <div class="card-header">POSTS</div>
+              <div class="card-body">
+                <form [formGroup]="postForm" (ngSubmit)="onPostSubmit()">
                   <div class="form-group">
-                      <label for="post">What's on your mind?</label>
-                      <textarea class="form-control" name="post" id="" cols="30" rows="3">Write something...</textarea>
+                    <label for="post">What's on your mind?</label>
+                    <textarea
+                      class="form-control"
+                      name="post"
+                      formControlName="postContent"
+                      cols="30"
+                      rows="3"
+                    >
+  Write something...</textarea
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="post">Image (optional)</label>
+                    <input type="file" (change)="fileChangeEvent($event)" class="form-control" accept="image/*" />
                   </div>
                   <div class="float-right">
-                      <button class="btn btn-primary">POST IT!</button>
+                    <button type="submit" class="btn btn-warning">
+                      POST IT!
+                    </button>
                   </div>
-                </div>
+                </form>
+                
               </div>
-              <div class="card mb-3">
-                <div class="card-header">
-                  <h5 class="h3 mb-0">Activity feed</h5>
-                </div>
-                <ng-container *ngFor="let item of user.posts">
-                  <div class="card">
-                    <div class="card-header d-flex align-items-center">
-                      <div class="d-flex align-items-center">
-                        <a href="javascript:void(0)">
-                          <img class="avatar" src="{{ user.userImage }}" />
+            </div>
+            <div class="card mb-3">
+              <div class="card-header">
+                <h5 class="h3 mb-0">Activity feed</h5>
+              </div>
+              <ng-container *ngFor="let item of user?.posts">
+                <div class="card">
+                  <div class="card-header d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <a href="javascript:void(0)">
+                        <img class="avatar" src="{{ user?.userImage }}" />
+                      </a>
+
+                      <div class="mx-3">
+                        <a
+                          class="text-dark font-weight-600 text-sm"
+                          href="javascript:void(0)"
+                        >
+                          {{ user?.userNickname }}
                         </a>
-    
-                        <div class="mx-3">
-                          <a
-                            class="text-dark font-weight-600 text-sm"
-                            href="javascript:void(0)"
-                          >
-                            {{ user.userNickname }}
-                          </a>
-    
-                          <small class="d-block text-muted">
-                            {{ item.createdAt | date: "dd/mm/yy hh:mm:ss" }}</small
-                          >
-                        </div>
+
+                        <small class="d-block text-muted">
+                          {{
+                            item?.createdAt | date: "dd/mm/yy hh:mm:ss"
+                          }}</small
+                        >
                       </div>
                     </div>
-                    <div class="card-body">
-                      <p class="mb-4">
-                        {{ item.content }}
-                      </p>
-                      <img
-                        alt="Image placeholder"
-                        class="img-fluid rounded"
-                        src="{{ item.imagePath }}"
-                      />
+                    <div class="text-right ml-auto" *ngIf="id === 0">
+                      <button
+                        class="btn btn-sm btn-danger btn-icon"
+                        type="button"
+                      >
+                        <span class="btn-inner--icon">
+                          <i class="ni ni-fat-add"> </i>
+                        </span>
+
+                        <span
+                          class="btn-inner--text"
+                          (click)="onDelete(item?.id)"
+                        >
+                          DELETE
+                        </span>
+                      </button>
                     </div>
-                    
                   </div>
-                </ng-container>
-              </div>
+                  <div class="card-body">
+                    <p class="mb-4">
+                      {{ item?.content }}
+                    </p>
+                    <img
+                      alt="Image placeholder"
+                      class="img-fluid rounded"
+                      src="{{ item?.imagePath }}"
+                    />
+                  </div>
+                </div>
+              </ng-container>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
- 
+</div>

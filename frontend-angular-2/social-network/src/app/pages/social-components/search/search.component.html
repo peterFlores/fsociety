@@ -1,0 +1,125 @@
+<div class="wrapper">
+  <div
+    class="page-header page-header-xs"
+    data-parallax="true"
+    style="background-image: url('https://picsum.photos/1920/1080')"
+  >
+    <div class="filter"></div>
+  </div>
+  <div class="section profile-content">
+    <div class="container">
+      <div class="main-body">
+        <div class="card">
+          <div class="card-header">SEARCH</div>
+          <div class="card-body">
+            <div class="container">
+              <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <select
+                    class="form-control"
+                    [(ngModel)]="selectedCity"
+                    required
+                    formControlName="tipo"
+                  >
+                    <option value="" disabled>Seleccionar</option>
+                    <option
+                      *ngFor="let b of defaultBindingsList"
+                      value="{{ b.value }}"
+                    >
+                      {{ b.label }}
+                    </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    formControlName="busqueda"
+                    class="form-control"
+                    placeholder="search..."
+                  />
+                </div>
+                <div class="float-right">
+                  <button type="submit" class="btn btn-warning">GO</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" *ngIf="visibleTop">
+      <div class="card mb-3">
+        <div class="card-header">
+          <h5 class="h3 mb-0">TOP USERS NOW</h5>
+        </div>
+        <ng-container *ngFor="let item of topUsers">
+          <div class=" card-header d-flex align-items-center">
+            <div class=" d-flex align-items-center">
+              <a href="javascript:void(0)">
+                <img class=" avatar" src="{{item.userImage}}" />
+              </a>
+  
+              <div class=" mx-3">
+                <a
+                  class=" text-dark font-weight-600 text-sm"
+                  href="javascript:void(0)"
+                >
+                  {{item.userName}}
+                </a>
+  
+                <small class=" d-block text-muted"> {{ item.userCreatedAt | date: 'dd/MM/yyyy'}} </small>
+              </div>
+            </div>
+  
+            <div class=" text-right ml-auto">
+              <button class=" btn btn-sm btn-primary btn-icon" type="button">
+                <span class=" btn-inner--icon">
+                  <i class=" ni ni-fat-add"> </i>
+                </span>
+  
+                <span class=" btn-inner--text" (click)="goToRoute(item.idUser)"> SEE PROFILE </span>
+              </button>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="container" *ngIf="visible">
+      <div class="card mb-3">
+        <div class="card-header">
+          <h5 class="h3 mb-0">Users found</h5>
+        </div>
+        <ng-container *ngFor="let item of users">
+          <div class=" card-header d-flex align-items-center">
+            <div class=" d-flex align-items-center">
+              <a href="javascript:void(0)">
+                <img class=" avatar" src="{{item.userImage}}" />
+              </a>
+  
+              <div class=" mx-3">
+                <a
+                  class=" text-dark font-weight-600 text-sm"
+                  href="javascript:void(0)"
+                >
+                  {{item.userName}}
+                </a>
+  
+                <small class=" d-block text-muted"> {{ item.userCreatedAt | date: 'dd/MM/yyyy'}} </small>
+              </div>
+            </div>
+  
+            <div class=" text-right ml-auto">
+              <button class=" btn btn-sm btn-primary btn-icon" type="button">
+                <span class=" btn-inner--icon">
+                  <i class=" ni ni-fat-add"> </i>
+                </span>
+  
+                <span class=" btn-inner--text" (click)="goToRoute(item.idUser)"> SEE PROFILE </span>
+              </button>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

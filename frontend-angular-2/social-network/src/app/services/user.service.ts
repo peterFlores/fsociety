@@ -1,65 +1,61 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-//import { User } from 'app/models/user';
+import { Response } from 'app/models/response';
+import { User } from 'app/models/user';
+import { Users } from 'app/models/users';
+import { UserItem } from 'app/models/user_item';
 import { environment } from 'environments/environment';
-import { from, Observable } from 'rxjs';
-
-import { auth } from 'firebase/app';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { User } from 'firebase';
-import { SocialAuthService } from 'angularx-social-login';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  public user: User;
+  constructor(private _httpClient: HttpClient) { }
 
-  constructor(private _httpClient: HttpClient,
-              public afAuth: AngularFireAuth,
-              private authService: SocialAuthService) { }
-
-  
-  async loginFacebook(){
-    try{
-      return this.afAuth.signInWithPopup(new auth.FacebookAuthProvider())
-    }
-    catch(error){console.log(error)}
-    
+  searchUsers(type: string, param: string): Observable<Users> {
+    return this._httpClient.get<Users>(`${environment.apiURL}/search/${type}/${param}`);
   }
-
   getUserByID(id: number): Observable<User> {
     id = 2;
     return this._httpClient.get<User>(`${environment.apiURL}/search_user/${id}`);
   }
 
-  get(url) {
-    return this._httpClient.get(url);
+  updateUser(id: number, birthdate, name, nickname, gender): Observable<Response> {
+    const body = new HttpParams()
+    .set("idUser",id.toString())
+    .set("userBirthDate", birthdate)
+    .set("userName", name)
+    .set("userNickname", nickname)
+    .set("userGender", gender);
+    return this._httpClient.put<Response>(`${environment.apiURL}/updateUser/${id}`, body);
   }
 
-  post(url, body) {
-    var headers_object = new HttpHeaders();
-    headers_object.append('Content-Type', 'application/x-www-form-urlencoded');
-    headers_object.append("Authorization", `Basic ${btoa("socialapp:12345")}`);
-
-    const httpOptions = {
-      headers: headers_object
-    };
-    
-    return this._httpClient.post(url, body, httpOptions);
+  getTop5(): Observable<UserItem[]> {
+    return this._httpClient.get<UserItem[]>(`${environment.apiURL}/listTop5`);
   }
 
-  put(url, data) {
-    return this._httpClient.put(url, data);
+  insertVisit(id: number, idVisitor: number): Observable<Response> {
+    return this._httpClient.get<Response>(`${environment.apiURL}/visit/${id}/${idVisitor}`);
   }
 
-  delete(url) {
-    return this._httpClient.delete(url);
+  updatePhoto(id: number, file: any): Observable<Response> {
+    const body = new FormData()
+        body.append("picture", file);
+    return this._httpClient.post<Response>(`${environment.apiURL}/upload/picture/${id}`, body);
   }
 
-  login(username: string, password: string): Observable<string>{
-    return this._httpClient.get<string>(environment.backend + '/oauth/token' + '$username' + username + '$password' + password );
-  }
 
+  login(): Observable<any> {
+    const body = new HttpParams()
+      .set('username', 'PETER@GMAIL.COM')
+      .set('password', '12345')
+      .set('grant_type', 'password');
+    return this._httpClient.post<any>(`${environment.apiURLOAUTH}/oauth/token`, body.toString(), {
+      headers: new HttpHeaders()
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        .set("Authorization", `Basic ${btoa("socialapp:12345")}`)
+    });
+  }
 }
