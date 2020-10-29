@@ -8,6 +8,7 @@ import { stringify } from 'querystring';
 import { promise } from 'protractor';
 import { AuthService } from 'app/services/auth.service';
 import { subscribeOn } from 'rxjs-compat/operator/subscribeOn';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -24,19 +25,19 @@ export class RegisterComponent implements OnInit {
   loggedIn: boolean;
 
   constructor(private userService: AuthService,
-              private authService: SocialAuthService) { }
+              private authService: SocialAuthService,
+              private router: Router) { }
 
-  async onFacebookLogin(){
-    try{
-      this.userService.loginFacebook();
-    }
-   catch(error){console.log(error)}
-  }
 
-  signInWithFB(): void {
-    this.authService.signIn((FacebookLoginProvider.PROVIDER_ID))
-    console.log()
+signInWithFB(): void {
+  try {
+    var data = this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+   localStorage.setItem('usuario', JSON.stringify(console.log(data)))
+   this.router.navigateByUrl('/home');
+  } catch (e) {
+    console.log(e);
   }
+}
 
 
   ngOnInit() {
@@ -58,6 +59,7 @@ export class RegisterComponent implements OnInit {
     this.userService.post(url, body)
       .subscribe(response => {
         console.log(response);
+        localStorage.setItem('user', JSON.stringify(response))
       });
   }
 

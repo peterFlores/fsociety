@@ -25,6 +25,7 @@ import { FacebookLoginProvider } from 'angularx-social-login';
 import { HomeComponent } from './pages/auth-components/home/home.component';
 import { CreatorsComponent } from './pages/auth-components/creators/creators.component';
 import { MetricsComponent } from './pages/auth-components/metrics/metrics.component';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { MetricsComponent } from './pages/auth-components/metrics/metrics.compon
     SocialLoginModule
   ],
   providers: [
+    AuthService,
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {

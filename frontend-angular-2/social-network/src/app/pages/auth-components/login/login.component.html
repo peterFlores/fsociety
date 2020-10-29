@@ -1,3 +1,4 @@
+
 <div class="wrapper">
   <div
     class="page-header"
@@ -12,7 +13,7 @@
             <div class="social-line text-center">
               <a
                 class="btn btn-neutral btn-facebook btn-just-icon"
-                (click)="onFacebookLogin()"
+                (click)="signInWithFB()"
               >
                 <i class="fa fa-facebook-square"></i>
               </a>
@@ -62,7 +63,6 @@
                 />
               </div>
               <button class="btn btn-danger btn-block btn-round" (click)="loginUser()">Ingresar</button>
-              <button class="btn btn-danger btn-block btn-round" (click)="decodificar()">validar</button>
               <button
                 class="btn btn-danger btn-neutral btn-block btn-round"
                 [routerLink]="['/registro']"

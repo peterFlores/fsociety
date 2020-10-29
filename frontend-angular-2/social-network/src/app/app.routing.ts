@@ -11,6 +11,7 @@ import { CreatorsComponent } from './pages/auth-components/creators/creators.com
 import { MetricsComponent } from './pages/auth-components/metrics/metrics.component'
 
 const appRoutes: Routes = [
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegisterComponent},
   {path: 'home', component: HomeComponent},
