@@ -4,7 +4,13 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { SocialLayoutComponent } from './layout/social-layout/social-layout.component';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
-
+//import { SocialLayoutComponent } from './layout/social-layout/social-layout.component';
+//import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
+import { LoginComponent } from './pages/auth-components/login/login.component';
+import { RegisterComponent } from './pages/auth-components/register/register.component';
+import { HomeComponent } from './pages/auth-components/home/home.component';
+import { CreatorsComponent } from './pages/auth-components/creators/creators.component';
+import { MetricsComponent } from './pages/auth-components/metrics/metrics.component'
 
 const routes: Routes = [
   {
@@ -16,6 +22,24 @@ const routes: Routes = [
         loadChildren:
           "./layout/social-layout/social-layout.module#SocialLayoutModule"
       },
+
+
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'login', component: LoginComponent},
+  {path: 'registro', component: RegisterComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'creadores', component: CreatorsComponent},
+  {path: 'metricas', component: MetricsComponent},
+
+  //{
+    //path: "",
+    //component: SocialLayoutComponent,
+    //children: [
+      //{
+        //path: "dashboard",
+        //loadChildren:
+       //   "./layout/social-layout/social-layout.module#SocialLayoutModule"
+      //},
       // {
       //   path: "components",
       //   loadChildren: "./pages/components/components.module#ComponentsModule"

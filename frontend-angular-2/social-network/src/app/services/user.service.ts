@@ -7,6 +7,8 @@ import { UserItem } from 'app/models/user_item';
 import { environment } from 'environments/environment';
 import { Observable } from 'rxjs';
 
+import * as jwt_decode from 'jwt-decode';
+
 @Injectable({
   providedIn: 'root'
 })
