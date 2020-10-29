@@ -13,11 +13,26 @@ import { SocialLayoutComponent } from './layout/social-layout/social-layout.comp
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { SearchComponent } from './pages/social-components/search/search.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './pages/auth-components/login/login.component';
+import { RegisterComponent } from './pages/auth-components/register/register.component';
+
+//firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from 'environments/environment';
+
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import { FacebookLoginProvider } from 'angularx-social-login';
+import { HomeComponent } from './pages/auth-components/home/home.component';
+import { CreatorsComponent } from './pages/auth-components/creators/creators.component';
+import { MetricsComponent } from './pages/auth-components/metrics/metrics.component';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
   declarations: [
-    SocialLayoutComponent, AuthLayoutComponent, AppComponent
+    SocialLayoutComponent, AuthLayoutComponent, AppComponent, LoginComponent, RegisterComponent, HomeComponent, CreatorsComponent, MetricsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,8 +42,26 @@ import { NgSelectModule } from '@ng-select/ng-select';
     RouterModule,
     ComponentsModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('365535794583694')
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
