@@ -1,4 +1,3 @@
-
 <div class="wrapper">
   <div
     class="page-header"
@@ -31,26 +30,51 @@
                   </span>
                 </div>
 
-                                  <input type="text" class="form-control" placeholder="Email" (focus)="focus=true" (blur)="focus=false" >
-                              </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Email"
+                  (focus)="focus = true"
+                  (blur)="focus = false"
+                  [(ngModel)]="username"
+                  name="username"
+                />
+              </div>
 
-                              <label>Password</label>
-                              <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">
-                                      <i class="nc-icon nc-key-25"></i>
-                                  </span>
-                                </div>
-                                  <input type="text" class="form-control" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
-                              </div>
-                              <button class="btn btn-danger btn-block btn-round">Login</button>
-                          </form>
-                      </div>
-                    </div>
+              <label>Password</label>
+              <div
+                class="input-group form-group-no-border"
+                [ngClass]="{ 'input-group-focus': focus1 === true }"
+              >
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="nc-icon nc-key-25"></i>
+                  </span>
                 </div>
-                <div class="footer register-footer text-center">
-                    <h6>&copy;{{test | date: 'yyyy'}}, by Ingenieria en Sistemas UMG</h6>
-                </div>
-            </div>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  (focus)="focus1 = true"
+                  (blur)="focus1 = false"
+                  [(ngModel)]="password"
+                  name="password"
+                />
+              </div>
+              <button class="btn btn-danger btn-block btn-round" (click)="loginUser()">Ingresar</button>
+              <button
+                class="btn btn-danger btn-neutral btn-block btn-round"
+                [routerLink]="['/registro']"
+              >
+                Registrar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer register-footer text-center">
+        <h6>&copy;{{ test | date: "yyyy" }}, by Ingenieria en Sistemas UMG</h6>
+      </div>
     </div>
+  </div>
 </div>

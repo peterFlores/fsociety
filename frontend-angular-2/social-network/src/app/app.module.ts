@@ -11,8 +11,6 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { SocialLayoutComponent } from './layout/social-layout/social-layout.component';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
-import { SearchComponent } from './pages/social-components/search/search.component';
-import { NgSelectModule } from '@ng-select/ng-select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/auth-components/login/login.component';
 import { RegisterComponent } from './pages/auth-components/register/register.component';

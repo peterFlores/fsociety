@@ -34,9 +34,6 @@ import jwt_decode from "jwt-decode";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  test : Date = new Date();
-  focus;
-  focus1;
   username: string;
   password: string;
   grant_type: string;  
@@ -44,6 +41,9 @@ export class LoginComponent implements OnInit {
   user: SocialUser;
   loggedIn: boolean;
 
+  focus;
+  focus1;
+  test : Date = new Date();
  
   constructor(private userService: AuthService,
               private _httpClient: HttpClient,
