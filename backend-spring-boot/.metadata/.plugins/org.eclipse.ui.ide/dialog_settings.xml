@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/Users/celsojavierrojasvillegas/Documents/fsociety"/>
 			<item value="/Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-oauth-service"/>
 			<item value="/Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app"/>
 			<item value="/Users/celsojavierrojasvillegas/eclipse-workspace/social-app"/>

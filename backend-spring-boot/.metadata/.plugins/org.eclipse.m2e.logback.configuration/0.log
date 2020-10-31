@@ -4162,3 +4162,81 @@ java.io.FileNotFoundException: /Users/celsojavierrojasvillegas/Documents/fsociet
 2020-10-22 17:28:13,716 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2020-10-22 17:28:13,718 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-10-22 17:28:13,718 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
+2020-10-31 07:14:15,707 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-10-31 07:17:48,666 [Worker-2: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-10-31 07:17:51,778 [Worker-2: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.pflores:social-oauth-service:0.0.1-SNAPSHOT @ /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-oauth-service/pom.xml.
+2020-10-31 07:17:56,168 [Worker-12: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.redsocial.web.app:social-app:0.0.1-SNAPSHOT @ /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/pom.xml.
+2020-10-31 07:17:58,903 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:17:58,907 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:17:58,930 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:17:59,036 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:17:59,038 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
+2020-10-31 07:17:59,116 [Worker-2: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /social-oauth-service/src/main/java
+2020-10-31 07:17:59,117 [Worker-2: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /social-oauth-service/src/main/resources
+2020-10-31 07:17:59,121 [Worker-2: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /social-oauth-service/src/main/resources
+2020-10-31 07:17:59,129 [Worker-2: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /social-oauth-service/src/test/java
+2020-10-31 07:18:01,197 [Worker-2: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 12 sec
+2020-10-31 07:18:01,200 [Worker-2: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-10-31 07:18:03,390 [Worker-2: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.pflores:social-oauth-service:0.0.1-SNAPSHOT @ /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-oauth-service/pom.xml.
+2020-10-31 07:18:04,524 [Worker-2: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.redsocial.web.app:social-app:0.0.1-SNAPSHOT @ /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/pom.xml.
+2020-10-31 07:18:06,402 [Worker-2: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /social-app/src/main/java
+2020-10-31 07:18:06,403 [Worker-2: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /social-app/src/main/resources
+2020-10-31 07:18:06,406 [Worker-2: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /social-app/src/main/resources
+2020-10-31 07:18:06,414 [Worker-2: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /social-app/src/test/java
+2020-10-31 07:18:06,771 [Worker-2: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /social-oauth-service/src/main/java
+2020-10-31 07:18:06,771 [Worker-2: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /social-oauth-service/src/main/resources
+2020-10-31 07:18:06,775 [Worker-2: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /social-oauth-service/src/main/resources
+2020-10-31 07:18:06,782 [Worker-2: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /social-oauth-service/src/test/java
+2020-10-31 07:18:07,556 [Worker-2: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 6 sec
+2020-10-31 07:18:08,591 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:18:08,600 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:18:08,620 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:18:08,626 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:18:08,626 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
+2020-10-31 07:18:10,359 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:18:10,359 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:18:10,361 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 07:18:10,364 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:18:10,365 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-oauth-service/src/test/resources
+2020-10-31 07:18:24,657 [Worker-12: Launching Executing install in _Users_celsojavierrojasvillegas_Documents_fsociety_backend-spring-boot_social-app] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app
+2020-10-31 07:18:24,659 [Worker-12: Launching Executing install in _Users_celsojavierrojasvillegas_Documents_fsociety_backend-spring-boot_social-app] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2020-10-31 07:18:45,557 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:18:45,558 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:18:45,559 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:18:45,562 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:18:45,562 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
+2020-10-31 07:34:31,622 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:34:31,623 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:34:31,624 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:34:31,627 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:34:31,627 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
+2020-10-31 07:35:34,912 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:35:34,927 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:35:34,928 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:35:34,932 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:35:34,932 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
+2020-10-31 07:36:20,539 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:36:20,539 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 07:36:20,539 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-10-31 07:36:20,541 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:36:20,541 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
+2020-10-31 07:37:09,324 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:37:09,324 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:37:09,325 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:37:09,328 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:37:09,328 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
+2020-10-31 07:39:16,261 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:39:16,264 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:39:16,265 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:39:16,413 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:39:16,415 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
+2020-10-31 07:40:56,891 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:40:56,892 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:40:56,893 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:40:56,894 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:40:56,894 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
+2020-10-31 07:41:04,857 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:41:04,867 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:41:04,869 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-10-31 07:41:04,871 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-31 07:41:04,871 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/celsojavierrojasvillegas/Documents/fsociety/backend-spring-boot/social-app/src/test/resources
