@@ -33,7 +33,7 @@ signInWithFB(): void {
   try {
     var data = this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
    localStorage.setItem('usuario', JSON.stringify(console.log(data)))
-   this.router.navigateByUrl('/home');
+   this.router.navigateByUrl('/profile');
   } catch (e) {
     console.log(e);
   }
@@ -59,10 +59,12 @@ signInWithFB(): void {
     this.userService.post(url, body)
       .subscribe(response => {
         console.log(response);
-        localStorage.setItem('user', JSON.stringify(response))
+        localStorage.setItem('token', JSON.stringify(response))
+        this.router.navigateByUrl('/profile');
       });
   }
 
-
-  
+  test : Date = new Date();
+  focus;
+  focus1;
 }

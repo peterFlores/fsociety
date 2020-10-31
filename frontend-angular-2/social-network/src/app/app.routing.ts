@@ -9,6 +9,8 @@ import { RegisterComponent } from './pages/auth-components/register/register.com
 import { HomeComponent } from './pages/auth-components/home/home.component';
 import { CreatorsComponent } from './pages/auth-components/creators/creators.component';
 import { MetricsComponent } from './pages/auth-components/metrics/metrics.component'
+import { ProfileComponent } from './examples/profile/profile.component';
+import { AuthGuard } from './helpers/auth.guard';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -17,6 +19,7 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'creadores', component: CreatorsComponent},
   {path: 'metricas', component: MetricsComponent},
+  {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]}
 
   //{
     //path: "",

@@ -4,10 +4,10 @@ import { HttpParams, JsonpClientBackend, JsonpInterceptor } from '@angular/commo
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'environments/environment';
-import { from, observable, Observable} from 'rxjs'
 
 import { SocialAuthService, SocialUser } from "angularx-social-login";
 import { FacebookLoginProvider } from "angularx-social-login";
+import { from, Observable, BehaviorSubject, observable } from "rxjs";
 
 import { AuthService } from 'app/services/auth.service';
 import * as JwtDecode from 'jwt-decode';
@@ -41,11 +41,18 @@ export class LoginComponent implements OnInit {
   user: SocialUser;
   loggedIn: boolean;
 
+  focus;
+  focus1;
+  test : Date = new Date();
  
   constructor(private userService: AuthService,
               private _httpClient: HttpClient,
               private authService: SocialAuthService,
-              private router: Router) { }
+              private router: Router) {
+                if (this.userService.currentUserValue) { 
+                  this.router.navigate(['/home']);
+              }
+               }
 
 
 
@@ -53,7 +60,7 @@ export class LoginComponent implements OnInit {
     try {
       var data = this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
      localStorage.setItem('usuario', JSON.stringify(console.log(data)))
-     this.router.navigateByUrl('/home');
+     this.router.navigateByUrl('/profile');
     } catch (e) {
       console.log(e);
     }
@@ -71,15 +78,17 @@ export class LoginComponent implements OnInit {
     this.userService.post(url, body)
       .subscribe(response => {
         const token = localStorage.setItem('token', JSON.stringify(response)) 
+        this.router.navigateByUrl('/profile');
         });
   }
 
-  //getDecodedAccessToken(){
-    //var token = localStorage.getItem('token');
-    //var decoded = jwt_decode(token); 
-    //var idUser = decoded.id;
-    //console.log(idUser); 
-  //}
+    getDecodedAccessToken(){
+    var token = localStorage.getItem('token');
+    var decoded = jwt_decode(token); 
+    var idUser = decoded.id;
+    const id = console.log(idUser); 
+  }
+
 
   logout(){
     localStorage.removeItem('token');

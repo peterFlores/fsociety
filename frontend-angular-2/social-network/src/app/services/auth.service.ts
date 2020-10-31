@@ -2,12 +2,10 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 //import { User } from 'app/models/user';
 import { environment } from "environments/environment";
-import { from, Observable } from "rxjs";
+import {  Observable, BehaviorSubject } from "rxjs";
 
-import { auth } from "firebase/app";
 import { AngularFireAuth } from "@angular/fire/auth";
 import { User } from "firebase";
-import { SocialAuthService } from "angularx-social-login";
 import { Router } from '@angular/router';
 // @ts-ignore  
 import jwt_decode from "jwt-decode";
@@ -16,18 +14,24 @@ import jwt_decode from "jwt-decode";
 @Injectable({
   providedIn: "root",
 })
+
+
+
 export class AuthService {
   public user: User;
-
+  private currentUserSubject: BehaviorSubject<'token'>;
+  public currentUser: Observable<'token'>;
 
   TOKEN_KEY='token'
 
   constructor(
     private _httpClient: HttpClient,
     public afAuth: AngularFireAuth,
-    private authService: SocialAuthService,
     private router: Router
-  ) {}
+  ) {
+    this.currentUserSubject = new BehaviorSubject<'token'>(JSON.parse(localStorage.getItem('token')));
+    this.currentUser = this.currentUserSubject.asObservable();
+  }
 
 
   logout(){
@@ -40,7 +44,13 @@ export class AuthService {
     var token = localStorage.getItem('token');
     var decoded = jwt_decode(token); 
     var idUser = decoded.id;
-    console.log(idUser);   
+    console.log(idUser); 
+    this.currentUserSubject.next(idUser);
+    return idUser;
+  }
+
+  public get currentUserValue(): 'token' {    
+    return this.currentUserSubject.value;
   }
 
   
