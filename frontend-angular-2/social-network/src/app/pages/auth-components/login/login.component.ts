@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
               private authService: SocialAuthService,
               private router: Router) {
                 if (this.userService.currentUserValue) { 
-                  this.router.navigate(['/home']);
+                  this.router.navigate(['/login']);
               }
                }
 
