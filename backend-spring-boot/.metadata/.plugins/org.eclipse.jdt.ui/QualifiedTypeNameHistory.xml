@@ -52,4 +52,5 @@
 <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.annotation.JsonNaming"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonInclude"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonInclude.Include"/>
+<fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration"/>
 </qualifiedTypeNameHistroy>
