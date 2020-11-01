@@ -21,7 +21,7 @@ const routes: Routes = [
     component: SocialLayoutComponent,
     children: [
       {
-        path: " ",
+        path: "dashboard",
         loadChildren:
           "./layout/social-layout/social-layout.module#SocialLayoutModule",
           canActivate: [AuthGuard]  
@@ -34,8 +34,6 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'creadores', component: CreatorsComponent},
   {path: 'metricas', component: MetricsComponent},
-  {path: 'profile', component: ProfileComponent,
-  canActivate: [AuthGuard]},
 
   //{
     //path: "",

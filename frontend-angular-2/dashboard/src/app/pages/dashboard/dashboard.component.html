@@ -1,0 +1,127 @@
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="card ">
+      <div class="card-header ">
+        <h5 class="card-title">Top post 5</h5>
+        <p class="card-category">Top post 5 de usuarios</p>
+      </div>
+      <div class="card-body ">
+        <ngx-charts-bar-vertical
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="analitic5"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="'USUARIO'"
+        [yAxisLabel]="'CANTIDAD'">
+      </ngx-charts-bar-vertical>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <div class="card ">
+      <div class="card-header ">
+        <h5 class="card-title">Registros por dia</h5>
+        <p class="card-category">Metrica para los registros de usuarios por dia</p>
+      </div>
+      <div class="card-body ">
+
+        <ngx-charts-bar-horizontal
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="analitic2"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="'REGISTROS'"
+        [yAxisLabel]="'FECHA'">
+      </ngx-charts-bar-horizontal>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-title">Generos registrados</h5>
+        <p class="card-category">Metrica de generos registrados en la app</p>
+      </div>
+      <div class="card-body">
+        <ngx-charts-bar-vertical
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="analitic1"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="'GENERO'"
+        [yAxisLabel]="'CANTIDAD'">
+      </ngx-charts-bar-vertical>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-title">Top visitas por dia</h5>
+        <p class="card-category">Metrica de visitas por dia</p>
+      </div>
+      <div class="card-body">
+        <ngx-charts-bar-vertical
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="analitic3"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="'FECHA'"
+        [yAxisLabel]="'CANTIDAD'">
+      </ngx-charts-bar-vertical>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-title">Top 5 de la semana</h5>
+        <p class="card-category">Metrica de top 5 de la semana</p>
+      </div>
+      <div class="card-body">
+        <ngx-charts-bar-vertical
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="analitic4"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="'USUARIO'"
+        [yAxisLabel]="'VISITAS'">
+      </ngx-charts-bar-vertical>
+      </div>
+
+    </div>
+  </div>
+</div>

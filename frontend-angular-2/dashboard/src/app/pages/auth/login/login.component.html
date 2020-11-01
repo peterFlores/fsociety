@@ -1,0 +1,63 @@
+<div class="wrapper">
+
+  <div class="main-panel">
+
+      <div class="content">
+
+        <div class="row">
+            <div class="card ">
+              <div class="card-header ">
+                <h5 class="card-title">Bienvenido</h5>
+                <p class="card-category">Iniciar Sesión</p>
+              </div>
+              <div class="card-body ">
+                <form class="register-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                  <label>Email</label>
+                  <div
+                    class="input-group form-group-no-border"
+
+                    [ngClass]="{ 'input-group-focus': focus === true }"
+                  >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="nc-icon nc-email-85"></i>
+                      </span>
+                    </div>
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Email"
+                      formControlName="email"
+                      name="username"
+                    />
+                  </div>
+
+                  <label>Password</label>
+                  <div
+                    class="input-group form-group-no-border"
+                    [ngClass]="{ 'input-group-focus': focus1 === true }"
+                  >
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="nc-icon nc-key-25"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Password"
+                      formControlName="password"
+                      name="password"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-danger btn-block btn-round" >Ingresar</button>
+                </form>
+              </div>
+
+            </div>
+
+        </div>
+      </div>
+  </div>
+</div>
